@@ -6,17 +6,18 @@
 
 {% block beforeContent %}
   <div class="govuk-phase-banner" style="padding-top: 0px;">
-    <p style="margin-bottom: 0;">
+    <p style="margin-bottom: 5px;">
       <span class="govuk-!-font-weight-bold">Nadiya Kanaa</span>, Bluebird Holidays Limited 
-      <span class="govuk-!-font-size-16" style="float: right;"><a href="#">Sign out</a></span>   
+      <span class="govuk-!-font-size-16" style="float: right; padding: 5px; boarder: 1px blue solid;"><a href="#">Sign out</span>   
     </p>
   </div>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-row" style="font-style">
     <div class="govuk-grid-column-one-quarter">
+
       <ul class="govuk-list">
         <li>
           <a class="govuk-link" href="#">Properties</a>
@@ -28,16 +29,20 @@
           <a class="govuk-link" href="#">Tax and payments</a>
         </li>
         <li>
+          <a class="govuk-link" href="#">Messages (2)</a>
+        </li>
+        <li>
           <a class="govuk-link" href="#">Settings</a>
         </li>
       </ul>
+
     </div>
     <div class="govuk-grid-column-three-quarters">
       <h3 class="govuk-heading-l">Provide accommodation in Wales</h3>
-      <div class="govuk-panel govuk-panel--confirmation" style="text-align: left; padding: 15px 15px 15px 15px; background-color: #0360a6;">
-        <p style="margin-bottom: 0; color: white;">
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
           <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">471</span><br>
-          <a href="#" class="govuk-link" style="color: white;">Night stays provided</a></p>
+          <a href="#" class="govuk-link" style="color: #1f1f1f;">Night stays provided</a></p>
       </div>
       <br><br>
       <table class="govuk-table">
@@ -113,7 +118,7 @@
 
       <br><br>
       <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Taxes and payments</caption>
+        <caption class="govuk-table__caption govuk-table__caption--m">Tax and payments</caption>
         <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Period</th>
@@ -172,7 +177,7 @@
 
         </tbody>
       </table>
-      <p class="govuk-body"><a href="#">View all taxes and licences</a></p>
+      <p class="govuk-body"><a href="#">View all tax and payments</a></p>
 
     </div>
   </div>
