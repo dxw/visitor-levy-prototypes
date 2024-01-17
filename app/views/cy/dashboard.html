@@ -1,0 +1,186 @@
+{% extends "layouts/main.html" %}
+{% set alternateLink = "/en/dashboard"%}
+
+{% block pageTitle %}
+  Home - GOV.UK Life Events
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner" style="padding-top: 0px;">
+    <p style="margin-bottom: 5px;">
+      <span class="govuk-!-font-weight-bold">Nadiya Kanaa</span>, Bluebird Holidays Limited 
+      <span class="govuk-!-font-size-16" style="float: right; padding: 5px; boarder: 1px blue solid;"><a href="#">Sign out</span>   
+    </p>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-one-quarter">
+
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="#">Properties</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Licences</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Tax and payments</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Messages (2)</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Settings</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+      <h3 class="govuk-heading-l">Provide accommodation in Wales</h3>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">471</span><br>
+          <a href="#" class="govuk-link" style="color: #1f1f1f;">Night stays provided</a></p>
+      </div>
+      <br><br>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Properties</caption>
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Address</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Council</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">71 Nunney Avenue, Cardiff, CF11...</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">Cardiff Council</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">35 Newport Road, Barry, CF62...</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">The Vale of Glamorgan Council</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">41 Station Approach. Cardiff, CF11...</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">Cardiff Council</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View all properties</a></p>
+      <br>
+      <br>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Licences</caption>
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Address</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Status</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">71 Nunney Avenue, Cardiff, CF11...</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Expires in 10 days
+            </strong>
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">35 Newport Road, Barry, CF62...</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <strong class="govuk-tag govuk-tag--grey">
+              Drafted
+            </strong>
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">41 Station Approach. Cardiff, CF11...</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <strong class="govuk-tag govuk-tag--green">
+              Just renewed
+            </strong>
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View all licences</a></p>
+
+      <br><br>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Tax and payments</caption>
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Period</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Nights stayed</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Amount</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Status</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jan - March 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            12
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £24
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <strong class="govuk-tag govuk-tag--blue">
+              Current
+            </strong>
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Oct - Dec 2026</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            103
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £206
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Due
+            </strong>
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jul - Sep 2026</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            192
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £384
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <strong class="govuk-tag govuk-tag--green">
+              Paid
+            </strong>
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View all tax and payments</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
