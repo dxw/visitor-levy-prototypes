@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+{% set alternateLink = "/cy/register/select-address"%}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/register/volume" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Select an address for the accommodation
+              </h1>
+            </legend>
+            <!--<div id="changedName-hint" class="govuk-hint">
+              This includes changing your last name or spelling your name differently.
+            </div>-->
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="location">
+                  Choose addresss
+                </label>
+                <select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
+                  <option selected="" disabled="">Choose address</option>
+                  <option value="250029368">56 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029369">58 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029370">60 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029371">62 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029372">64 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029373">66 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029374">68 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029375">70 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029376">71 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029377">72 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029378">73 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029379">74 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029380">75 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029381">76 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029382">77 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029383">79 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029384">81 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029385">83 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029386">85 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029387">87 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029388">89 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029389">91 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029390">93 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029391">95 Nunney Avenue, Cardiff, CF11 4LF</option>
+                  <option value="250029392">97 Nunney Avenue, Cardiff, CF11 4LF</option>
+                </select>
+              </div>
+          </fieldset>
+        </div>
+
+        <button type="submit" class="govuk-button" data-module="govuk-button" id="button-gov-wales">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

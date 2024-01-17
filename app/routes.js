@@ -7,3 +7,7 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
+
+router.get("/", function (request, response) {
+  response.redirect('/en/index')
+});
