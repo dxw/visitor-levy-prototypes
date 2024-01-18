@@ -1,4 +1,5 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/welsh.html" %}
+{% set alternateLink = "/en/register/pay-fee"%}
 
 {% block pageTitle %}
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -16,15 +17,18 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/register/pay-fee" method="post">
+      <form class="form" action="./number-of-accommodation" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Do you provide visitor accommodation in Wales?
+                Do you charge a fee to stay in the accommodation you provide?
               </h1>
             </legend>
+            <div id="changedName-hint" class="govuk-hint">
+              This includes changing your last name or spelling your name differently.
+            </div>
             <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
