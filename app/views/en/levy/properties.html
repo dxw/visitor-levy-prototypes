@@ -18,15 +18,18 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
 
+      <p class="govuk-body" style="margin-bottom: 5px;">
+        <a class="govuk-link" href="#">Tax and payments</a>      
+      </p>
       <div style="border-left: 4px solid #0360a6; margin-left: -14px; padding-left: 10px;">
         <p class="govuk-body" style="margin-bottom: 5px;">
           <a class="govuk-link" href="#">Properties</a>
         </p>
         <p class="govuk-body" style="margin-bottom: 5px;">
-          — <a class="govuk-link" href="#">Registered properties</a>
+          — <a class="govuk-link govuk-!-font-weight-bold" href="#">Registered properties</a>
         </p>
         <p class="govuk-body" style="margin-bottom: 5px;">
-          — <a class="govuk-link govuk-!-font-weight-bold" href="#">New registrations</a>
+          — <a class="govuk-link" href="#">New registrations</a>
         </p>
       </div>
       <p class="govuk-body" style="margin-bottom: 5px;">
@@ -38,16 +41,19 @@
 
     </div>
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-l">New registrations</span>
-      <h1 class="govuk-heading-l">Check before you register</h1>
+      <h1 class="govuk-heading-l">Registered properties</h1>
+
+      <div class="govuk-form-group">
+        <input class="govuk-input" id="event-name" name="eventName" type="text" placeholder="Fina a property">
+      </div>
 
       <div class="govuk-summary-card">
         <div class="govuk-summary-card__title-wrapper">
           <h2 class="govuk-summary-card__title">Property 1</h2>
           <ul class="govuk-summary-card__actions">
-            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Delete choice<span class="govuk-visually-hidden"> property</span></a>
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> property</span></a>
             </li>
-            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> property details</span></a>
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#" style="color: #d4351c  ;">De-register<span class="govuk-visually-hidden"> property details</span></a>
             </li>
           </ul>
         </div>
@@ -73,10 +79,36 @@
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
+                Visitor levy
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <strong class="govuk-tag">
+                  Starts soon
+                </strong>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
                 Type
               </dt>
               <dd class="govuk-summary-list__value">
                 Holiday let
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Tax organisation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Bluebird Holidays Limited
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date registered
+              </dt>
+              <dd class="govuk-summary-list__value">
+                26 June 2026
               </dd>
             </div>
           </dl>
@@ -87,9 +119,9 @@
         <div class="govuk-summary-card__title-wrapper">
           <h2 class="govuk-summary-card__title">Property 2</h2>
           <ul class="govuk-summary-card__actions">
-            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Delete choice<span class="govuk-visually-hidden"> property</span></a>
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> property</span></a>
             </li>
-            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> property details</span></a>
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#" style="color: #d4351c  ;">De-register<span class="govuk-visually-hidden"> property details</span></a>
             </li>
           </ul>
         </div>
@@ -115,10 +147,36 @@
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
+                Visitor levy
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <strong class="govuk-tag govuk-tag--grey">
+                  Not currently
+                </strong>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
                 Type
               </dt>
               <dd class="govuk-summary-list__value">
                 Holiday let
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Tax organisation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Bluebird Holidays Limited
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date registered
+              </dt>
+              <dd class="govuk-summary-list__value">
+                26 June 2026
               </dd>
             </div>
           </dl>
@@ -129,9 +187,9 @@
         <div class="govuk-summary-card__title-wrapper">
           <h2 class="govuk-summary-card__title">Property 3</h2>
           <ul class="govuk-summary-card__actions">
-            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Delete choice<span class="govuk-visually-hidden"> property</span></a>
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> property</span></a>
             </li>
-            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> property details</span></a>
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#" style="color: #d4351c  ;">De-register<span class="govuk-visually-hidden"> property details</span></a>
             </li>
           </ul>
         </div>
@@ -157,21 +215,41 @@
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
+                Visitor levy
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <strong class="govuk-tag">
+                  Starts soon
+                </strong>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
                 Type
               </dt>
               <dd class="govuk-summary-list__value">
                 Holiday let
               </dd>
             </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Tax organisation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Bluebird Holidays Limited
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date registered
+              </dt>
+              <dd class="govuk-summary-list__value">
+                26 June 2026
+              </dd>
+            </div>
           </dl>
         </div>
       </div>
-
-      <form action="/en/register/confirm-bulk-upload" method="post" novalidate >
-        <button class="govuk-button" data-module="govuk-button" style="background-color: #0360a6;">
-          Continue
-        </button>
-      </form>
 
     </div>
   </div>
