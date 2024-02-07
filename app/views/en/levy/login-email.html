@@ -16,26 +16,29 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <span class="govuk-caption-xl">Provide accommodation Wales</span>
-      <h1 class="govuk-heading-xl">
-        Sign into service
-      </h1>
-
       <form class="form" action="/en/levy/login-code" method="post">
 
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="email">
-            Email address
-          </label>
-          <div id="email-hint" class="govuk-hint">
-            We’ll only use this to send you a receipt
+        <div class="govuk-form-group" id="form-background-gov-wales">
+          <span class="govuk-caption-m">Provide accommodation in Wales</span>
+          <h1 class="govuk-heading-xl">
+            Email - sign in
+          </h1>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="email">
+              Email address
+            </label>
+            <div id="email-hint" class="govuk-hint">
+              We’ll only use this to send you security code
+            </div>
+            <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
           </div>
-          <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
-        </div>
 
-        <button type="submit" class="govuk-button" data-module="govuk-button" style="background-color: #0360a6;">
-          Continue
-        </button>
+          <br>
+
+          <button type="submit" class="govuk-button" data-module="govuk-button" id=continue-button-gov-wales>
+            Continue
+          </button>
+        </div>
 
       </form>
 

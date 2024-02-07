@@ -5,8 +5,38 @@
 
 // Add extra styles here
 
-#button-gov-wales {
-  background-color: #019e39;
+#start-button-gov-wales {
+  background: #019e1e;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  padding: 15px 20px 15px 20px; 
+  margin: 0 0 15px;
+}
+
+#continue-button-gov-wales {
+  background: #0360a6;
+  border: 1px 1px solid #0360a6; color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 15px 20px;
+}
+
+#back-button-gov-wales {
+  background: #0360a6;
+  border: 1px 1px solid #0360a6; color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 15px 20px;
+}
+
+#form-background-gov-wales {
+  background: #f1f1f1;
+  padding: 40px 40px 20px 40px
+}
+
+#input-gov-wales {
+  background: #ffffff;
 }
 
 .language-switch-button {

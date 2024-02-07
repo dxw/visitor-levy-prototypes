@@ -19,14 +19,14 @@
 
       <form class="form" action="./pay-fee" method="post">
 
-        <div class="govuk-form-group">
+        <div class="govuk-form-group" id="form-background-gov-wales">
           <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
                 Do you provide visitor accommodation in Wales?
               </h1>
             </legend>
-            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
                 <label class="govuk-label govuk-radios__label" for="changedName">
@@ -34,7 +34,7 @@
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no" id="input-gov-wales">
                 <label class="govuk-label govuk-radios__label" for="changedName-2">
                   No
                 </label>
@@ -43,7 +43,7 @@
           </fieldset>
         </div>
 
-        <button type="submit" class="govuk-button" data-module="govuk-button" id="button-gov-wales">
+        <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
           Continue
         </button>
 
