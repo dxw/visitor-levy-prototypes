@@ -30,13 +30,40 @@
   padding: 15px 20px;
 }
 
+#sign-out-button-gov-wales {
+ border: 1px #0360a6 solid;
+ font-size: 16px;
+ font-weight: bold;
+ color: #0360a6;
+ background: #fff;
+ margin-bottom: 10px;
+}
+
+#call-out-gov-wales {
+  background: #e5e5e5; 
+  border-left: 10px solid #0360a6; 
+  display: block;
+  font-size: 18px;  
+  font-weight: bold;
+  padding: 25px 30px;
+}
+
+#confirmation-gov-wales {
+  background: #cdf7d4; 
+  border-left: 10px solid #019e1e; 
+  display: block;
+  font-size: 18px;  
+  font-weight: bold;
+  padding: 25px 30px;
+}
+
 #form-background-gov-wales {
   background: #f1f1f1;
   padding: 40px 40px 20px 40px
 }
 
-#input-gov-wales {
-  background: #ffffff;
+input[type='radio']:after {
+    background-color: #fffff;
 }
 
 .language-switch-button {
