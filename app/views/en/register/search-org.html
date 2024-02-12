@@ -1,0 +1,53 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
+
+          <form action="./search-org" method="post" novalidate >
+
+            <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What is the limited company called?
+                </h1>
+              </legend>
+              <br>
+
+              <link rel="stylesheet" href="assets/css/accessible-autocomplete.min.css" />
+
+              <!-- towns and cities -->
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-font-weight-bold" for="address-town">
+                  Search for a limited company
+                </label>
+                <select id="location-picker">
+                  <option value="fr">France</option>
+                  <option value="de">Germany</option>
+                  <option value="gb">United Kingdom</option>
+                </select>
+              </div>
+
+            </fieldset>
+
+            <br><br>
+
+            <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+              Continue
+            </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

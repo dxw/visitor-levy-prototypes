@@ -43,25 +43,38 @@
     </div>
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
 
-        <p id="confirmation-gov-wales">
-          Success<br><br>
-          <span class="govuk-!-font-weight-regular">71 Nunney Avenue, Swandiff, CF62 3AF will stop being registered as accommodation on 24 March 2026</span>
-        </p>
+        <form class="form" action="/en/middles-ends/select-address-add-more" method="post">
 
-        <p class="govuk-body">We have sent you a confirmation email.</p>
-        <h2 class="govuk-heading-m">What happens next</h2>
-        <p class="govuk-body">
-          You no longer need to collect visitor levy for this property from 24 March 2026
-        </p>
-        <p class="govuk-body">
-          Swandiff Council will contact you to confirm when they've closed their records for this property.
-        </p>
-        <p class="">You can still see records for this property.</p>
-        <p class="govuk-body">
-          <a href="#" class="govuk-link">Return to registered properties</a>
-        </p>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What is the property's postcode?
+                </h1>
+              </legend>
+              <!--<div id="changedName-hint" class="govuk-hint">
+                This includes changing your last name or spelling your name differently.
+              </div>-->
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="address-postcode">
+                    Postcode
+                  </label>
+                  <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+                </div>
+              </div>
+            </fieldset>
+          </div>
 
+          <br>
+
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+
+        </form>
       </div>
 
     </div>

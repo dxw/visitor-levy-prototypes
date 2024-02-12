@@ -1,0 +1,73 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
+
+          <form action="./liable-person" method="post" novalidate >
+
+            <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What type of accommodation is this property used as?
+                </h1>
+              </legend>
+              <br>
+              <p id="call-out-gov-wales" style="background: #fff;">71 Nunney Avenue, Swandiff, CF62 3AF</p>
+              <br>
+
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="signIn" name="property-type" type="radio" value="Campsite or caravan park" aria-describedby="proerty-type-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="signIn">
+                    Campsite or caravan park
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="signIn-2" name="property-type" type="radio" value="Hotel" aria-describedby="proerty-type-item-2-hint">
+                  <label class="govuk-label govuk-radios__label" for="signIn-2">
+                    Hotel
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="signIn" name="property-type" type="radio" value="Self-catering" aria-describedby="proerty-type-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="signIn">
+                    Self-catering
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="signIn-2" name="property-type" type="radio" value="Bed and breakfast" aria-describedby="proerty-type-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="signIn-2">
+                    Bed and breakfast
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="signIn-2" name="property-type" type="radio" value="Bed and breakfast" aria-describedby="proerty-type-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="signIn-2">
+                    Other
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <br><br>
+
+            <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+              Continue
+            </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

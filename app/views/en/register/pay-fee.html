@@ -5,52 +5,48 @@
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
-
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="./number-of-accommodation" method="post">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+        <form action="./postcode" method="post" novalidate >
+
+          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Do you charge a fee to stay in the accommodation you provide?
+                Do you charge money to stay in your accommodation?
               </h1>
             </legend>
-            <div id="changedName-hint" class="govuk-hint">
-              This includes changing your last name or spelling your name differently.
-            </div>
-            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+
+            <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="changedName">
-                  Yes
+                <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+                <label class="govuk-label govuk-radios__label" for="signIn">
+                  Yes, I charge money
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="changedName-2">
-                  No
+                <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="signIn-2">
+                  No, it's free to stay
                 </label>
               </div>
             </div>
           </fieldset>
-        </div>
 
-        <button type="submit" class="govuk-button" data-module="govuk-button" id="button-gov-wales">
-          Continue
-        </button>
+          <br>
 
-      </form>
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+
+        </form>
+
+      </div>
 
     </div>
   </div>
