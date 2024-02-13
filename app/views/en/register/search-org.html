@@ -13,7 +13,7 @@
       <div class="govuk-form-group" id="form-background-gov-wales">
         <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
 
-          <form action="./search-org" method="post" novalidate >
+          <form action="./confirm" method="post" novalidate >
 
             <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -25,16 +25,11 @@
 
               <link rel="stylesheet" href="assets/css/accessible-autocomplete.min.css" />
 
-              <!-- towns and cities -->
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-!-font-weight-bold" for="address-town">
-                  Search for a limited company
+                <label class="govuk-label" for="full">
+                  Search company name on Companies House
                 </label>
-                <select id="location-picker">
-                  <option value="fr">France</option>
-                  <option value="de">Germany</option>
-                  <option value="gb">United Kingdom</option>
-                </select>
+                <input class="govuk-input govuk-!-width-full" id="full" name="full" type="text">
               </div>
 
             </fieldset>

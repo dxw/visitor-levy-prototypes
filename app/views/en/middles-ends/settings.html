@@ -17,27 +17,31 @@
 
   <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-one-third">
-      <p class="govuk-body" style="margin-bottom: 5px;">
-        <a class="govuk-link" href="#">Properties</a>
-      </p>
-      <p class="govuk-body" style="margin-bottom: 5px;">
-        <a class="govuk-link" href="#">Messages</a>
-      </p>
-      <div style="border-left: 4px solid #0360a6; margin-left: -14px; padding-left: 10px;">
-        <p class="govuk-body" style="margin-bottom: 5px;">
-          <a class="govuk-link" href="#">Settings</a>
-        </p>
-        <p class="govuk-body" style="margin-bottom: 5px;">
-          — <a class="govuk-link govuk-!-font-weight-bold" href="#">Members</a>
-        </p>
-        <p class="govuk-body" style="margin-bottom: 5px;">
-          — <a class="govuk-link" href="#">API keys</a>
-        </p>
-      </div>
+    <div class="govuk-grid-column-one-quarter">
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link" href="./homepage">Dashboard</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Tax and payments</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="/en/middles-ends/properties">Properties</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Licences</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Messages (1)</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="./settings">Settings</a>
+        </li>
+      </ul>
 
     </div>
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-three-quarters">
       <span class="govuk-caption-l">Settings</span>
       <h1 class="govuk-heading-l">Members</h1>
 
@@ -60,13 +64,56 @@
             </strong>
           </td>
           <td class="govuk-table__cell govuk-table__cell--numeric">
-            26 June 2026
+            23 January 2026
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Edit</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Ryan Thomas</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <strong class="govuk-tag govuk-tag--orange">
+              Property manager
+            </strong>
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            11 November 2026
           </td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Edit</a></td>
         </tr>
         </tbody>
       </table>
       <p class="govuk-body"><a href="/en/levy/new-member-email">Add new members</a></p>
+
+      <br><br>
+
+      <div class="govuk-form-group" id="danger-background-gov-wales">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m" style="margin-bottom: 30px;">Danger zone</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header" style="border-bottom: solid #aa1111 0px;">
+                <form action="#" method="post" novalidate >
+                  <button class="govuk-button" data-module="govuk-button" id="danger-button-gov-wales" style="margin-bottom: 30px;">
+                    Transfer business
+                  </button>
+                </form>
+              </th>
+              <td class="govuk-table__cell" style="border-bottom: solid #aa1111 0px;">Make another person or organisation liable for all your registered properties, their levies and licences.</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header" style="border-bottom: solid grey 0px;">
+                <form action="./date-closing-business" method="post" novalidate >
+                  <button class="govuk-button" data-module="govuk-button" id="danger-button-gov-wales" style="margin-bottom: 0px;">
+                    Close down business
+                  </button>
+                </form>
+              </th>
+              <td class="govuk-table__cell" style="border-bottom: solid grey 0px;">De-register all your properties and stop all liabilities including levies and licences.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
 
     </div>
   </div>
