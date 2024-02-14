@@ -14,7 +14,7 @@
         <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
 
 
-        <form action="./org-type" method="post" novalidate >
+        <form action="./postcode" method="post" novalidate >
 
           <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -30,7 +30,37 @@
             </div>
           </fieldset>
 
-          <p>Relation radio</p>
+          <br>
+          <br>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Role
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+                  <label class="govuk-label govuk-radios__label" for="changedName">
+                    I operate as a sole trader
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+                  <label class="govuk-label govuk-radios__label" for="changedName-2">
+                    I operate in a partnership
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+                  <label class="govuk-label govuk-radios__label" for="changedName-2">
+                    I present a person, charity, limited company, organisation or trust that operates it
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
 
           <br><br>
 
