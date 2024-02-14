@@ -1,6 +1,6 @@
 # Visitor levy prototypes
 
-We are a team at the Welsh Revenue Authority; tasked with implenting Wales' first ever visitor levy (tourist tax).
+We are a team at the Welsh Revenue Authority; tasked with implenting Wales' first ever visitor levy.
 
 This website documents our early design work of how a visitor levy and the services related to it might work.
 
