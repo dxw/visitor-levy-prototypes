@@ -1,0 +1,35 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Confirmation page
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <p id="confirmation-gov-wales">
+          Success<br><br>
+          <span class="govuk-!-font-weight-regular"><a href="./homepage" style="color: inherit;">Three properties</a> are now registered as accommodation.</span>
+        </p>
+
+        <p class="govuk-body">We have sent you a confirmation email.</p>
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">
+          You will get updates from both Swandiff and Carmouth Councils about any future plans to introduce a visitor levy in your area.
+        </p>
+        <p class="">You can de-register these properties at anytime.</p>
+        <p class="govuk-body">
+          <a href="./homepage" class="govuk-link" style="color: #0360a6;">View registered properties</a>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

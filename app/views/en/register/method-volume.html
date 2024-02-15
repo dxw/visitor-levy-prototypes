@@ -16,33 +16,36 @@
         <form action="./postcode" method="post" novalidate >
 
           <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
-                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                How do you want to register?
-              </h1>
-            </legend>
 
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
-                <label class="govuk-label govuk-radios__label" for="signIn">
-                  Fill in a form, one property at a time
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
-                <label class="govuk-label govuk-radios__label" for="signIn-2">
-                  Upload a spreadsheet, one or more property at a time
-                </label>
-              </div>
-            </div>
+            {{ govukRadios({
+              name: "inputtype",
+              value: data['inputtype'],
+              fieldset: {
+                legend: {
+                  text: "How do you want to create proofs?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--l"
+                }
+              },
+              items: [
+                {
+                  value: "form",
+                  text: "Fill in a form - one proof at a time"
+                },
+                {
+                  value: "spreadsheet",
+                  text: "Upload a spreadsheet - one proof or more"
+                }
+              ]
+            }) }}
+
+            <br>
+
+            <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+              Continue
+            </button>
+
           </fieldset>
-
-          <br>
-
-          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
-            Continue
-          </button>
 
         </form>
 

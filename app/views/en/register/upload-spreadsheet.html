@@ -4,79 +4,55 @@
   Generate proof - GOV.UK Proof
 {% endblock %}
 
-{% block beforeContent %}
-  <div class="govuk-phase-banner" style="padding-top: 0px;">
-    <p style="margin-bottom: 5px;">
-      <span class="govuk-!-font-weight-bold">Nadiya Kanaa</span>, Bluebird Holidays Limited 
-      <span class="govuk-!-font-size-16" style="float: right; padding: 5px; boarder: 1px blue solid;"><a href="#">Sign out</span>   
-    </p>
-  </div>
-{% endblock %}
-
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
 
-      <div style="border-left: 4px solid #0360a6; margin-left: -14px; padding-left: 10px;">
-        <p class="govuk-body" style="margin-bottom: 5px;">
-          <a class="govuk-link" href="#">Properties</a>
-        </p>
-        <p class="govuk-body" style="margin-bottom: 5px;">
-          — <a class="govuk-link" href="#">Registered properties</a>
-        </p>
-        <p class="govuk-body" style="margin-bottom: 5px;">
-          — <a class="govuk-link govuk-!-font-weight-bold" href="#">New registrations</a>
-        </p>
-      </div>
-      <p class="govuk-body" style="margin-bottom: 5px;">
-        <a class="govuk-link" href="#">Messages</a>
-      </p>
-      <p class="govuk-body" style="margin-bottom: 5px;">
-        <a class="govuk-link" href="#">Settings</a>
-      </p>
-
-    </div>
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-l">New registrations</span>
-      <h1 class="govuk-heading-l">Upload accommodation details</h1>
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <h1 class="govuk-heading-l">Upload accommodation details</h1>
 
 
-      <div class="govuk-form-group" style="border: 2px dashed #0b0c0c  ; padding: 20px 20px 20px 20px;">
-        <label class="govuk-label" for="file-upload-1">
-          Upload a file
-        </label>
-        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+        <div class="govuk-form-group" style="border: 2px dashed #0b0c0c  ; padding: 20px 20px 20px 20px; background: #fff;">
+          <label class="govuk-label" for="file-upload-1">
+            Upload a file
+          </label>
+          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+        </div>
+
+        <br>
+
+        <form action="./check-upload" method="post" novalidate >
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+        </form>
+
+        <h2 class="govuk-heading-m">Your file needs to look like this example</h2>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Address line 1</th>
+            <th scope="col" class="govuk-table__header">Town or city</th>
+            <th scope="col" class="govuk-table__header">Postcode</th>
+            <th scope="col" class="govuk-table__header">7 more columns</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">11 Bilton Road</th>
+            <td class="govuk-table__cell">Neath</td>
+            <td class="govuk-table__cell">SA11 1AA</td>
+            <td class="govuk-table__cell"><a href="#">View all</a></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <p class="govuk-body"><a href="#">Download template</a></p>
       </div>
-
-      <form action="/en/register/preview-upload" method="post" novalidate >
-        <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
-          Continue
-        </button>
-      </form>
-
-      <h2 class="govuk-heading-m">Your file needs to look like this example</h2>
-
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Address line 1</th>
-          <th scope="col" class="govuk-table__header">Town or city</th>
-          <th scope="col" class="govuk-table__header">Postcode</th>
-          <th scope="col" class="govuk-table__header">7 more columns</th>
-        </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">11 Bilton Road</th>
-          <td class="govuk-table__cell">Neath</td>
-          <td class="govuk-table__cell">SA11 1AA</td>
-          <td class="govuk-table__cell"><a href="#">View all</a></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <p class="govuk-body"><a href="#">Download template</a></p>
 
     </div>
   </div>
