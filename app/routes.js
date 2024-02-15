@@ -12,6 +12,29 @@ router.get("/", function (request, response) {
   response.redirect('/en/index')
 });
 
+// Filter out accommodation not in Wales
+router.post('/en/register/not-suitable-nation', function(request, response) {
+
+    var nation = request.session.data['nation']
+    if (nation == "wales"){
+        response.redirect("/en/register/charge-fee")
+    } else {
+        response.redirect("/en/register/not-suitable-nation")
+    }
+})
+
+// Filter out free accommodation 
+router.post('/en/register/not-suitable-fee', function(request, response) {
+
+    var fee = request.session.data['fee']
+    if (fee == "yes"){
+        response.redirect("/en/register/email")
+    } else {
+        response.redirect("/en/register/not-suitable-fee")
+    }
+})
+
+// Choose how to register - form or spreadsheet
 router.post('/en/register/postcode', function(request, response) {
 
     var inputtype = request.session.data['inputtype']
