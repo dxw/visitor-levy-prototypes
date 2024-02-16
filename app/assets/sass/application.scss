@@ -42,6 +42,19 @@
   box-shadow: 0 2px 0 #7e0a0e;
 }
 
+#back-link-gov-wales {
+  color: #0360a6; 
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+#back-link-gov-wales::before {
+  border-color: #0360a6;
+  border-width: 2px 2px 0 0;
+}
+
 #back-button-gov-wales {
   background: #0360a6;
   border: 1px 1px solid #0360a6; color: #fff;
@@ -63,8 +76,19 @@
   color: #0360a6;
 }
 
+#summary-card {
+  background: #fff; 
+  border: 2px solid #666666;
+}
+
+#summary-card-wrapper {
+  background: #dddddd; 
+  border-bottom: 2px solid #666666;
+}
+
 #summary-card__action a, a:visited, a:hover, a:active {
-  color: #0360a6;
+  color: #0360a6; 
+  text-decoration: none;
 }
 
 .govuk-radios__label::before {
