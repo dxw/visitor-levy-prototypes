@@ -45,48 +45,36 @@
       <div class="govuk-form-group" id="form-background-gov-wales">
         <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
 
-        <h1 class="govuk-heading-l" style="margin-bottom: 5px;">
-          This property is already registered
-        </h1>
+        <form class="form" action="./select-address" method="post">
 
-        <table id="call-out-table-gov-wales">
-          <tr>
-            <td style="padding-bottom: 10px">Liable person:</td>
-            <td id="table-cell" style="padding-bottom: 10px">Ceri Thomas</td>
-          </tr>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What is the property's postcode?
+                </h1>
+              </legend>
+              <!--<div id="changedName-hint" class="govuk-hint">
+                This includes changing your last name or spelling your name differently.
+              </div>-->
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="address-postcode">
+                    Postcode
+                  </label>
+                  <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
           <br>
-          <tr>
-            <td style="padding-bottom: 10px">Organisation:</td>
-            <td style="padding-bottom: 10px" id="table-cell">Coast Getaways Limited</td>
-          </tr>
-          <tr>
-            <td style="padding-bottom: 10px; vertical-align: top;">Address:</td>
-            <td style="padding-bottom: 10px" id="table-cell">68 Blaneff Drive<br>Carmouth<br> CM32 8AF</td>
-          </tr>
-          <tr>
-            <td style="padding-bottom: 10px">Accommodation type:</td>
-            <td style="padding-bottom: 10px" id="table-cell">B&B</td>
-          </tr>
-          <tr>
-            <td style="padding-bottom: 10px">Council:</td>
-            <td style="padding-bottom: 10px" id="table-cell">Carmouth Council</td>
-          </tr>
-          <tr>
-            <td style="padding-bottom: 10px">Registered:</td>
-            <td style="padding-bottom: 10px" id="table-cell">29 July 2025</td>
-          </tr>
-        </table>
 
-        <br>
-
-        <p class="govuk-body">You can request to be the liable person for this property. An email will be sent to the current liable person to approve or reject the request.</p>
-
-        <form class="form" action="/en/middles-ends/confirm-request-add-more" method="post">
           <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
-            Request to be liable for this property
+            Continue
           </button>
-        </form>
 
+        </form>
       </div>
 
     </div>
