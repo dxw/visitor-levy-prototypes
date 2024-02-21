@@ -1,9 +1,6 @@
 {% extends "layouts/english.html" %}
-{% set alternateLink = "/cy/dashboard"%}
-
-{% block pageTitle %}
-  Home - Provide accommodation in Wales
-{% endblock %}
+{% set alternateLink = "/cy/register/security-code"%}
+{% set pageName="Visitor levy prototypes" %}
 
 {% block content %}
 
@@ -13,7 +10,7 @@
 
       <div class="govuk-form-group" id="form-background-gov-wales">
 
-        <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
 
         <form action="./method-volume" method="post" novalidate >
 
@@ -23,12 +20,12 @@
                 Enter security code
               </h1>
             </legend>
-            <p id="call-out-gov-wales" style="background: #fff;"><span class="govuk-!-font-weight-regular">Code emailed to </span>{{ data['email'] }}</p>
+            <p id="call-out-gov-wales" style="background: #fff;"><span class="govuk-!-font-weight-regular">Code emailed to </span>nadiya@blueblueholidays.com{{ data['email'] }}</p>
             <label class="govuk-label" for="email">
-              Enter email verification code
+              Enter email security code
             </label>
             <div id="email-hint" class="govuk-hint">
-              We’ve emailed you eight digit verification code
+              We’ve emailed you eight digit security code
             </div>
             <input class="govuk-input govuk-input--width-10" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
           </div>

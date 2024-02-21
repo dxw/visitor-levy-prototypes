@@ -1,9 +1,6 @@
 {% extends "layouts/english.html" %}
-{% set alternateLink = "/cy/register/pay-fee"%}
-
-{% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
+{% set alternateLink = "/cy/register/method-volume"%}
+{% set pageName="Visitor levy prototypes" %}
 
 {% block content %}
 
@@ -11,7 +8,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <div class="govuk-form-group" id="form-background-gov-wales">
-        <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
 
         <form action="./postcode" method="post" novalidate >
 

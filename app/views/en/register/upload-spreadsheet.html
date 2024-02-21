@@ -1,8 +1,6 @@
-{% extends "layouts/main.html" %}
-
-{% block pageTitle %}
-  Generate proof - GOV.UK Proof
-{% endblock %}
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/upload-spreadsheet"%}
+{% set pageName="Visitor levy prototypes" %}
 
 {% block content %}
 
@@ -12,7 +10,9 @@
 
       <div class="govuk-form-group" id="form-background-gov-wales">
 
-        <h1 class="govuk-heading-l">Upload accommodation details</h1>
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <h1 class="govuk-heading-l">Upload spreadsheet</h1>
 
 
         <div class="govuk-form-group" style="border: 2px dashed #0b0c0c  ; padding: 20px 20px 20px 20px; background: #fff;">
