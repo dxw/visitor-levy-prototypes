@@ -44,10 +44,14 @@
     <div class="govuk-grid-column-three-quarters">
       <h3 class="govuk-heading-l">Accommodation in Wales</h3>
       <div class="govuk-form-group">
-        <input class="govuk-input" id="event-name" name="eventName" type="text" placeholder="Search by address, organisation or individual name">
+      <form action="./search-results" method="post" novalidate >
+        <input class="govuk-input" id="event-name" name="eventName" type="text" placeholder="Search by address, organisation or individual name" style="width: 87.7%; border-right: 0px solid black;">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="display: block; float: right; background: #323232; color: #fff; font-weight: 700; padding: 8px 10px 8px 10px">
+        Search
+        </button>
+      </form>
       </div>
 
-      <br>
       <br>
       <br>
 
@@ -64,7 +68,7 @@
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Randal Homes Limited</th>
           <td class="govuk-table__cell govuk-table__cell--numeric">
-            <strong class="govuk-tag govuk-tag--red">
+            <strong class="govuk-tag govuk-tag--orange">
               Missing records
             </strong>
           </td>
@@ -73,7 +77,7 @@
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">18 Gwent Lane, Portwys, PW32...</th>
           <td class="govuk-table__cell govuk-table__cell--numeric">
-            <strong class="govuk-tag govuk-tag--yellow">
+            <strong class="govuk-tag govuk-tag--grey">
               Address not found
             </strong>
           </td>
@@ -82,7 +86,7 @@
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">54 Cwmwl Mews, Swandiff SD21...</th>
           <td class="govuk-table__cell govuk-table__cell--numeric">
-              <strong class="govuk-tag govuk-tag--orange">
+              <strong class="govuk-tag govuk-tag--yellow">
               Duplicate address
             </strong>
           </td>
