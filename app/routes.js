@@ -28,7 +28,7 @@ router.post('/en/register/not-suitable-fee', function(request, response) {
 
     var fee = request.session.data['fee']
     if (fee == "yes"){
-        response.redirect("/en/register/name-relationship")
+        response.redirect("/en/register/email")
     } else {
         response.redirect("/en/register/not-suitable-fee")
     }

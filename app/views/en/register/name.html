@@ -1,5 +1,5 @@
 {% extends "layouts/english.html" %}
-{% set alternateLink = "/cy/register/security-code"%}
+{% set alternateLink = "/cy/register/name-relationship"%}
 {% set pageName="Visitor levy prototypes" %}
 
 {% block content %}
@@ -7,28 +7,25 @@
   <div class="govuk-grid-row" style="font-style">
 
     <div class="govuk-grid-column-two-thirds">
-
       <div class="govuk-form-group" id="form-background-gov-wales">
-
         <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
 
-        <form action="./name" method="post" novalidate >
 
-          <div class="govuk-form-group">
+        <form action="./org-type" method="post" novalidate >
+
+          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Enter security code
+                Who is your name?
               </h1>
             </legend>
-            <p id="call-out-gov-wales" style="background: #fff;"><span class="govuk-!-font-weight-regular">Code emailed to </span>nadiya@blueblueholidays.com{{ data['email'] }}</p>
-            <label class="govuk-label" for="email">
-              Enter email security code
-            </label>
-            <div id="email-hint" class="govuk-hint">
-              We’ve emailed you eight digit security code
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="full-name">
+                Full name
+              </label>
+              <input class="govuk-input" id="full-name" name="fullName" type="text" spellcheck="false" autocomplete="name">
             </div>
-            <input class="govuk-input govuk-input--width-10" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
-          </div>
+          </fieldset>
 
           <br>
 
@@ -36,11 +33,9 @@
             Continue
           </button>
         </form>
-
       </div>
 
     </div>
-
   </div>
 
 {% endblock %}

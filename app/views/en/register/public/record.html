@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a href="#" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 20px; margin-bottom: 0px;">Search public register
+  <a href="./homepage" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 20px; margin-bottom: 0px;">Search public register
   </a>
 {% endblock %}
 
@@ -23,7 +23,7 @@
           <dl class="govuk-summary-list">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Register number
+                Property ID
               </dt>
               <dd class="govuk-summary-list__value">
                 87219786
@@ -55,18 +55,18 @@
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Org type
+                Provider name
               </dt>
               <dd class="govuk-summary-list__value">
-                Limited company
+                Bluebird Holidays Limited
               </dd>
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Org name
+                Provider type
               </dt>
               <dd class="govuk-summary-list__value">
-                Bluebird Holidays Limited
+                Limited company
               </dd>
             </div>
             <div class="govuk-summary-list__row">
@@ -81,10 +81,10 @@
         </div>
       </div>
 
-      <h2 class="govuk-heading-m">Responsible for this property?</h2>
+      <h2 class="govuk-heading-m">Responsible for this accommodation?</h2>
       <p class="govuk-body">You can update this record by signing in with your registered email.</p>
 
-      <form action="./confirm" method="post" novalidate >
+      <form action="#" method="post" novalidate >
 
         <div class="govuk-button-group">
           <button type="submit" class="govuk-button" data-module="govuk-button" id="secondary-button-gov-wales">
@@ -94,6 +94,20 @@
 
       </form>
 
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">Something wrong?</h2>
+      <p class="govuk-body">You can report this proerty if it doesn't meet <a href="#">legal standards</a> for accommodation in Wales.</p>
+
+      <form action="#" method="post" novalidate >
+
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="secondary-button-gov-wales">
+            Report this property
+          </button>
+        </div>
+
+      </form>
     </div>
   </div>
 

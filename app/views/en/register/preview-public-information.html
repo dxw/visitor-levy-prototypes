@@ -1,0 +1,114 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/check-answers"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Preview of public register</h1>
+
+      <p class="govuk-body">Some details you give will be published on <a href="#">public register of accommdation in Wales</a>.</p>
+
+      <p class="govuk-body">We will email you a link to the public register when your finish registering.</p> 
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <h2 class="govuk-heading-m">What details will be on the public register</h2>
+
+        <div class="govuk-summary-card" style="background: #f1f1f1; border: 10px solid #0360a6;">
+          <div class="govuk-summary-card__title-wrapper" style="background: #0360a6; padding-top: 5px;">
+            <h2 class="govuk-summary-card__title" style="color: #fff;">  71 Nunney Avenue, Swandiff, SD32 8AF</h2>
+          </div>
+          <div class="govuk-summary-card__content" style="background: #fff;">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Property ID
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  87219786
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Date registered
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  27 January 2026
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Council
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Swandiff Council
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Self-catering
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Provider name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Bluebird Holidays Limited
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Provider type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Limited company
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Companie House number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <a href="#">06617101</a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                I understand what accommodation details will be published on the public register. 
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <form action="./check-answers" method="post" novalidate >
+
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

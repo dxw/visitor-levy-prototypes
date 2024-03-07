@@ -11,23 +11,20 @@
         <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
 
 
-        <form action="./email" method="post" novalidate >
+        <form action="./method-volume" method="post" novalidate >
 
           <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Who is doing this registration?
+                Who is your role with this company?
               </h1>
             </legend>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="full-name">
-                Full name
-              </label>
-              <input class="govuk-input" id="full-name" name="fullName" type="text" spellcheck="false" autocomplete="name">
-            </div>
           </fieldset>
 
           <br>
+          <p id="call-out-gov-wales" style="background: #fff;">
+            <span style="font-weight: 400;">Company</span> Bluebird Holidays Limited
+          </p>
           <br>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
@@ -40,19 +37,19 @@
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
                   <label class="govuk-label govuk-radios__label" for="changedName">
-                    I operate as a sole trader
+                    I am a director of the company
                   </label>
                 </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
                   <label class="govuk-label govuk-radios__label" for="changedName-2">
-                    I operate in a partnership
+                    I am a employee at the compaby
                   </label>
                 </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
                   <label class="govuk-label govuk-radios__label" for="changedName-2">
-                    I present a person, charity, limited company, organisation or trust that operates it
+                    I represent the limited company, includes property management companies and accountancies
                   </label>
                 </div>
               </div>
