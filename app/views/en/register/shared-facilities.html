@@ -1,0 +1,67 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/name-relationship"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+
+        <form action="./preview-public-information" method="post" novalidate >
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="nation-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Do guests use any shared facilities?
+                </h1>
+              </legend>
+              <p>Knowing this will help determinate what rate of visitor levy guest will pay.</p>
+              <div id="nation-hint" class="govuk-hint">
+                Select all facilities that apply
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nation" name="nation" type="checkbox" value="wales">
+                  <label class="govuk-label govuk-checkboxes__label" for="nation">
+                    Shared bathrooms and show facilities
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nation" name="nation" type="checkbox" value="england">
+                  <label class="govuk-label govuk-checkboxes__label" for="nation">
+                    Shared dormitories 
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nation-2" name="nation" type="checkbox" value="portugal">
+                  <label class="govuk-label govuk-checkboxes__label" for="nation-2">
+                    Shared kitchen facilities
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__divider">or</div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nation-5" name="nation" type="checkbox" value="none" data-behaviour="exclusive" style="background-color: #fff;">
+                  <label class="govuk-label govuk-checkboxes__label" for="nation-5">
+                    None of these facilities
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <br><br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
