@@ -16,8 +16,31 @@ router.get("/", function (request, response) {
 router.post('/en/register/not-suitable-nation', function(request, response) {
 
     var nation = request.session.data['nation']
-    if (nation == "wales"){
-        response.redirect("/en/register/charge-fee")
+
+    if (nation == "wls"){
+        response.redirect("/en/register/charge-fee");
+
+    } else if (nation == "wls,eng"){
+        response.redirect("/en/register/charge-fee");
+
+    } else if (nation == "wls,eng,sct"){
+        response.redirect("/en/register/charge-fee");
+
+    } else if (nation == "wls,eng,sct,ni"){
+        response.redirect("/en/register/charge-fee");
+
+    } else if (nation == "wls,sct"){
+        response.redirect("/en/register/charge-fee");
+
+    } else if (nation == "wls,sct,ni"){
+        response.redirect("/en/register/charge-fee");
+
+    } else if (nation == "wls,eng,ni"){
+        response.redirect("/en/register/charge-fee");
+
+    } else if (nation == "wls,ni"){
+        response.redirect("/en/register/charge-fee");
+    
     } else {
         response.redirect("/en/register/not-suitable-nation")
     }
