@@ -1,5 +1,5 @@
 {% extends "layouts/english.html" %}
-{% set alternateLink = "/cy/register/nation"%}
+{% set alternateLink = "/cy/register/country"%}
 {% set pageName="Visitor levy prototypes" %}
 
 {% block content %}
@@ -10,48 +10,48 @@
       <div class="govuk-form-group" id="form-background-gov-wales">
         <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
 
-        <form class="form" action="./not-suitable-nation" method="post">
+        <form class="form" action="./not-suitable-country" method="post">
 
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="nation-hint">
+            <fieldset class="govuk-fieldset" aria-describedby="country-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
                   Where is the accommodation?
                 </h1>
               </legend>
-              <div id="nation-hint" class="govuk-hint">
+              <div id="country-hint" class="govuk-hint">
                 Select all countries that apply
               </div>
               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="nation" name="nation" type="checkbox" value="wales">
-                  <label class="govuk-label govuk-checkboxes__label" for="nation">
+                  <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="wls">
+                  <label class="govuk-label govuk-checkboxes__label" for="country">
                     Wales
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="nation" name="nation" type="checkbox" value="england">
-                  <label class="govuk-label govuk-checkboxes__label" for="nation">
+                  <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="eng">
+                  <label class="govuk-label govuk-checkboxes__label" for="country">
                     England
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="nation-2" name="nation" type="checkbox" value="portugal">
-                  <label class="govuk-label govuk-checkboxes__label" for="nation-2">
+                  <input class="govuk-checkboxes__input" id="country-2" name="country" type="checkbox" value="sct">
+                  <label class="govuk-label govuk-checkboxes__label" for="country-2">
                     Scotland
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="nation-3" name="nation" type="checkbox" value="spain">
-                  <label class="govuk-label govuk-checkboxes__label" for="nation-3">
+                  <input class="govuk-checkboxes__input" id="country-3" name="country" type="checkbox" value="ni">
+                  <label class="govuk-label govuk-checkboxes__label" for="country-3">
                     Northern Ireland
                   </label>
                 </div>
                 <div class="govuk-checkboxes__divider">or</div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="nation-5" name="nation" type="checkbox" value="none" data-behaviour="exclusive" style="background-color: #fff;">
-                  <label class="govuk-label govuk-checkboxes__label" for="nation-5">
-                    None of these nation
+                  <input class="govuk-checkboxes__input" id="country-5" name="country" type="checkbox" value="none" data-behaviour="exclusive" style="background-color: #fff;">
+                  <label class="govuk-label govuk-checkboxes__label" for="country-5">
+                    None of these countries
                   </label>
                 </div>
               </div>

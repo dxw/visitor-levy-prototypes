@@ -13,36 +13,36 @@ router.get("/", function (request, response) {
 });
 
 // Filter out accommodation not in Wales
-router.post('/en/register/not-suitable-nation', function(request, response) {
+router.post('/en/register/not-suitable-country', function(request, response) {
 
-    var nation = request.session.data['nation']
+    var country = request.session.data['country']
 
-    if (nation == "wls"){
+    if (country == "wls"){
         response.redirect("/en/register/charge-fee");
 
-    } else if (nation == "wls,eng"){
+    } else if (country == "wls,eng"){
         response.redirect("/en/register/charge-fee");
 
-    } else if (nation == "wls,eng,sct"){
+    } else if (country == "wls,eng,sct"){
         response.redirect("/en/register/charge-fee");
 
-    } else if (nation == "wls,eng,sct,ni"){
+    } else if (country == "wls,eng,sct,ni"){
         response.redirect("/en/register/charge-fee");
 
-    } else if (nation == "wls,sct"){
+    } else if (country == "wls,sct"){
         response.redirect("/en/register/charge-fee");
 
-    } else if (nation == "wls,sct,ni"){
+    } else if (country == "wls,sct,ni"){
         response.redirect("/en/register/charge-fee");
 
-    } else if (nation == "wls,eng,ni"){
+    } else if (country == "wls,eng,ni"){
         response.redirect("/en/register/charge-fee");
 
-    } else if (nation == "wls,ni"){
+    } else if (country == "wls,ni"){
         response.redirect("/en/register/charge-fee");
     
     } else {
-        response.redirect("/en/register/not-suitable-nation")
+        response.redirect("/en/register/not-suitable-country")
     }
 })
 
