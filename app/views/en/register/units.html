@@ -17,9 +17,26 @@
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  How many rooms does the hotel have?
-                </h1>
+                {% if data.type=="campsite" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many pitches does the site have?
+                  </h1>
+                {% endif %}
+                {% if data.type=="hotel" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many rooms does the hotel have?
+                  </h1>
+                {% endif %}
+                {% if data.type=="self-catering" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many rooms does the property have?
+                  </h1>
+                {% endif %}
+                {% if data.type=="bnb" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many rooms does the property have?
+                  </h1>
+                {% endif %}
               </legend>
               <!--<div id="changedName-hint" class="govuk-hint">
                 This includes changing your last name or spelling your name differently.
@@ -27,9 +44,20 @@
               <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="address-postcode">
-                    Number of rooms
+                    {% if data.type=="campsite" %}
+                      Number of pitches
+                    {% endif %}
+                    {% if data.type=="hotel" %}
+                      Number of rooms
+                    {% endif %}
+                    {% if data.type=="self-catering" %}
+                      Number of rooms
+                    {% endif %}
+                    {% if data.type=="bnb" %}
+                      Number of rooms
+                    {% endif %}
                   </label>
-                  <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+                  <input class="govuk-input govuk-input--width-10" id="address-postcode" name="units" type="text" autocomplete="postal-code">
                 </div>
               </div>
             </fieldset>
