@@ -24,14 +24,17 @@
               <!--<div id="changedName-hint" class="govuk-hint">
                 This includes changing your last name or spelling your name differently.
               </div>-->
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="address-postcode">
-                    Postcode
-                  </label>
-                  <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text" autocomplete="postal-code">
-                </div>
+
+              <div class="govuk-form-group govuk-form-group--error">
+                <label class="govuk-label" for="national-insurance-number">
+                  Postcode
+                </label>
+                <p id="national-insurance-number-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span>The postcode must be in Wales
+                </p>
+                <input class="govuk-input govuk-input--width-10 govuk-input--error" id="postcode" name="postcode" type="text" autocomplete="postal-code">
               </div>
+
             </fieldset>
           </div>
 

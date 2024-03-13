@@ -58,6 +58,17 @@ router.post('/en/register/not-suitable-fee', function(request, response) {
 })
 
 // Choose how to register - form or spreadsheet
+router.post('/en/register/select-address', function(request, response) {
+
+    var postcode = request.session.data['postcode']
+    if (postcode == "HR1 1DB"){
+        response.redirect("/en/register/non-welsh-postcode")
+    } else {
+        response.redirect("/en/register/select-address")
+    }
+})
+
+// Choose how to register - form or spreadsheet
 router.post('/en/register/postcode', function(request, response) {
 
     var inputtype = request.session.data['inputtype']
