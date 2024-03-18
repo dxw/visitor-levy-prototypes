@@ -236,3 +236,12 @@ input[type='radio']:after {
     @include govuk-responsive-margin(5, "top");
   }
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.grid-item {
+  text-align: center;
+}
