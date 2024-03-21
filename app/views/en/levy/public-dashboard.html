@@ -1,0 +1,108 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/levy/public-dashboard"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="location">
+          Choose local council
+        </label>
+        <select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
+          <option value="choose" selected>Swandiff Council</option>
+          <option value="eastmidlands">East Midlands</option>
+          <option value="eastofengland">East of England</option>
+          <option value="london">London</option>
+          <option value="northeast">North East</option>
+          <option value="northwest">North West</option>
+          <option value="southeast">South East</option>
+          <option value="southwest">South West</option>
+          <option value="westmidlands">West Midlands</option>
+          <option value="yorkshire">Yorkshire and the Humber</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="location">
+          Choose year
+        </label>
+        <select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
+          <option value="choose" selected>2026-27</option>
+          <option value="eastmidlands">East Midlands</option>
+          <option value="eastofengland">East of England</option>
+          <option value="london">London</option>
+          <option value="northeast">North East</option>
+          <option value="northwest">North West</option>
+          <option value="southeast">South East</option>
+          <option value="southwest">South West</option>
+          <option value="westmidlands">West Midlands</option>
+          <option value="yorkshire">Yorkshire and the Humber</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-l">Visitor levy in Swandiff</h3>
+
+      <!--<div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">1,209,200</span><br>
+          <a href="#" class="govuk-link" style="color: #1f1f1f;">Night stays provided</a></p>
+      </div>-->
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #F8D756;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£1,891,300</span><br>
+          <a href="#" class="govuk-link" style="color: #1f1f1f;">Visited levy collected in 2026-27</a></p>
+      </div>
+
+      <br><br>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">How money was spent</caption>
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">What</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Amount</th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Public toilets</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £403,000
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Museums and parks</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £340,300
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Road maintenance</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £492,000
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Waste and pest control</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £332,000
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Beach and coast maintenance</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £324,000
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+{% endblock %}
