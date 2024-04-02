@@ -1,0 +1,47 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Visitor levy prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <h1 class="govuk-heading-l">Writing about these prototypes</h1>
+
+    <p class="govuk-body-l">This part of the website explains some of the thinking about <a href="/">the prototypes</a>. Providing detail on what we prototyped, when and what we would have next were there more time.</p> 
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="./sprint-8">Registration revised</a>
+        | Sprint 8
+      </li>
+      <li>
+        <a href="./sprint-9">Key moments for accommodation providers</a>
+        | Sprint 9
+      </li>
+      <li>
+        <a href="./sprint-10">Designing the back office</a>
+        | Sprint 10
+      </li>
+      <li>
+        <a href="./sprint-11">Capturing liability and accommodation type</a>
+        | Sprint 11
+      </li>
+      <li>
+        <a href="./sprint-12">Ideas still to explore</a>
+        | Sprint 12
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}
