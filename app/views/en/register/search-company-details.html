@@ -29,6 +29,17 @@
                 <input class="govuk-input govuk-!-width-full" id="full" name="full" type="text">
               </div>
 
+              <!--
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-font-weight-bold" for="address-town">
+                  Search for a town or city
+                </label>
+                <select class="govuk-select govuk-input--width-20" name="town-city-one" id="choose-country">
+                  {% include "components/area/select-options.html" %}
+                </select>
+              </div>
+              -->
+
             </fieldset>
 
             <br><br>
@@ -47,5 +58,17 @@
 
     </div>
   </div>
+
+  <script type="text/javascript">
+      // Area choose country
+      let selectElement = document.querySelector('#choose-country')
+
+      if (selectElement) {
+        accessibleAutocomplete.enhanceSelectElement({
+          defaultValue: '',
+          selectElement: selectElement
+        })
+      }
+  </script>
 
 {% endblock %}
