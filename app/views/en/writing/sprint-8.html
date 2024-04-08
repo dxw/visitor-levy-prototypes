@@ -93,21 +93,26 @@
 
     <h2 class="govuk-heading-m">Pulling business details from Companies House</h2>
 
-    <p class="govuk-body">Before people had to input a lot of information about their company.</p>
+    <p class="govuk-body">Previously people had to input a lot of information about their company. People in user research told us, for example, they don't know their Companies House number, so would have to interupt their journey to go find this out.</p>
 
     <img src="/public/images/sprint-8/old-company-info.png" id="writing-image">
 
-    <p class="govuk-body">We changed to pulling the information from Companies house.</p>
+    <p class="govuk-body">We opted for a different idea, where someone could get all the company details, just by searching for its name, thanks to the <a href="https://developer.company-information.service.gov.uk/">Companies House API</a>. With all the other details like address and company number being pulled into the service automatically.</p>
 
-    <p class="govuk-body">[HOLD - add video after prototype update]</p>
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/sprint-8/company-search.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
     <p class="govuk-body">This has several advantages:</p>
 
     <ol class="govuk-list govuk-list--number">
-      <li>save manually typing in information</li>
-      <li>reduce wrong information being typed in</li> 
-      <li>Automated update business info when Companies House data changes</li>
+      <li>Saves people manually typing in information</li>
+      <li>Reduce wrong or inaccuted information being submitted</li>
+      <li>Automated updates to business info when Companies House data changes, such as <a href="/en/middles-ends/email-companies-house-push">when a business ceases trading</a>.</li>
     </ol>
+
+    <p class="govuk-body">The same feature could be done for searching for charity information using the <a href="https://register-of-charities.charitycommission.gov.uk/documentation-on-the-api">Charity Commission API</a>.</p>
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
 
