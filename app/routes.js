@@ -57,7 +57,18 @@ router.post('/en/register/not-suitable-fee', function(request, response) {
     }
 })
 
-// Choose how to register - form or spreadsheet
+// Filter out free accommodation 
+router.post('/en/register/search-company-details', function(request, response) {
+
+    var OrgType = request.session.data['OrgType']
+    if (OrgType == "Charity"){
+        response.redirect("/en/register/search-charity-details")
+    } else {
+        response.redirect("/en/register/search-company-details")
+    }
+})
+
+// Stop non-Welsh postcodes being used
 router.post('/en/register/select-address', function(request, response) {
 
     var postcode = request.session.data['postcode']
