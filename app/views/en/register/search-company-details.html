@@ -20,8 +20,6 @@
               </legend>
               <br>
 
-              <link rel="stylesheet" href="assets/css/accessible-autocomplete.min.css" />
-
               <div class="govuk-form-group">
                 <label class="govuk-label" for="full">
                   Search company name on Companies House
@@ -29,16 +27,14 @@
                 <input class="govuk-input govuk-!-width-full" id="full" name="full" type="text">
               </div>
 
-              <!--
               <div class="govuk-form-group">
                 <label class="govuk-label govuk-!-font-weight-bold" for="address-town">
                   Search for a town or city
                 </label>
-                <select class="govuk-select govuk-input--width-20" name="town-city-one" id="choose-country">
+                <select class="govuk-select govuk-input--width-20" name="town-city-one" id="choose-country" data-module="autocomplete">
                   {% include "components/area/select-options.html" %}
                 </select>
               </div>
-              -->
 
             </fieldset>
 
@@ -58,17 +54,5 @@
 
     </div>
   </div>
-
-  <script type="text/javascript">
-      // Area choose country
-      let selectElement = document.querySelector('#choose-country')
-
-      if (selectElement) {
-        accessibleAutocomplete.enhanceSelectElement({
-          defaultValue: '',
-          selectElement: selectElement
-        })
-      }
-  </script>
-
+  
 {% endblock %}
