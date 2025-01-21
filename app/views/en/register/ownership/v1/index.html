@@ -1,0 +1,83 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/org-type"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+          <form action="./search-company-details" method="post" novalidate >
+
+            <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Who owns the accommodation you're registering?
+                </h1>
+              </legend>
+              <br>
+
+              <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="signIn" name="OrgType" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+                      <label class="govuk-label govuk-radios__label" for="signIn">
+                        Sole trader
+                      </label>
+                      <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                        You own the business as an individual and have personal responsibility for it and complete a self-assessment tax return.
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="signIn-2" name="OrgType" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                      <label class="govuk-label govuk-radios__label" for="signIn-2">
+                        Company
+                      </label>
+                      <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                        This includes limited companies and public limited companies. 
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="signIn-2" name="OrgType" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                      <label class="govuk-label govuk-radios__label" for="signIn-2">
+                        Partnership
+                      </label>
+                      <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                        You and your business partner (or partners) personally share responsibility for your business.
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="signIn-2" name="OrgType" type="radio" value="Charity" aria-describedby="signIn-2-item-hint">
+                      <label class="govuk-label govuk-radios__label" for="signIn-2">
+                        Charity
+                      </label>
+                      <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                        The organisation is registered with the Charity Commisssion.
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="signIn-2" name="OrgType" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                      <label class="govuk-label govuk-radios__label" for="signIn-2">
+                        Multiple organisations
+                      </label>
+                      <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                        Accommodation belongs to multiple people, businsess or charities. 
+                      </div>
+                    </div>
+                  </div>
+            </fieldset>
+
+            <br><br>
+
+            <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+              Save and continue
+            </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

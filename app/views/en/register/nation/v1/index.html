@@ -1,0 +1,72 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/country"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <form class="form" action="./not-suitable-country" method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="country-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Where is the accommodation?
+                </h1>
+              </legend>
+              <div id="country-hint" class="govuk-hint">
+                Select all countries that apply
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="wls">
+                  <label class="govuk-label govuk-checkboxes__label" for="country">
+                    Wales
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="eng">
+                  <label class="govuk-label govuk-checkboxes__label" for="country">
+                    England
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="country-2" name="country" type="checkbox" value="sct">
+                  <label class="govuk-label govuk-checkboxes__label" for="country-2">
+                    Scotland
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="country-3" name="country" type="checkbox" value="ni">
+                  <label class="govuk-label govuk-checkboxes__label" for="country-3">
+                    Northern Ireland
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__divider">or</div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="country-5" name="country" type="checkbox" value="none" data-behaviour="exclusive" style="background-color: #fff;">
+                  <label class="govuk-label govuk-checkboxes__label" for="country-5">
+                    None of these countries
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <br>
+
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

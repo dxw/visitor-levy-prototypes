@@ -1,0 +1,80 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/postcode"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="./capacity" method="post">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <form class="form" action="/en/middles-ends/select-address-add-more" method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                {% if data.type=="campsite" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many pitches does the site have?
+                  </h1>
+                {% endif %}
+                {% if data.type=="hotel" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many rooms does the hotel have?
+                  </h1>
+                {% endif %}
+                {% if data.type=="self-catering" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many rooms does the property have?
+                  </h1>
+                {% endif %}
+                {% if data.type=="bnb" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many rooms does the property have?
+                  </h1>
+                {% endif %}
+              </legend>
+              <!--<div id="changedName-hint" class="govuk-hint">
+                This includes changing your last name or spelling your name differently.
+              </div>-->
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="address-postcode">
+                    {% if data.type=="campsite" %}
+                      Number of pitches
+                    {% endif %}
+                    {% if data.type=="hotel" %}
+                      Number of rooms
+                    {% endif %}
+                    {% if data.type=="self-catering" %}
+                      Number of rooms
+                    {% endif %}
+                    {% if data.type=="bnb" %}
+                      Number of rooms
+                    {% endif %}
+                  </label>
+                  <input class="govuk-input govuk-input--width-10" id="address-postcode" name="units" type="text" autocomplete="postal-code">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <br>
+
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Save and continue
+          </button>
+
+        </form>
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

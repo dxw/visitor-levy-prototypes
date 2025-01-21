@@ -1,0 +1,60 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/upload-spreadsheet"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <h1 class="govuk-heading-l">Upload spreadsheet</h1>
+
+
+        <div class="govuk-form-group" style="border: 2px dashed #0b0c0c  ; padding: 20px 20px 20px 20px; background: #fff;">
+          <label class="govuk-label" for="file-upload-1">
+            Upload a file
+          </label>
+          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+        </div>
+
+        <br>
+
+        <form action="./check-upload" method="post" novalidate >
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Save and continue
+          </button>
+        </form>
+
+        <h2 class="govuk-heading-m">Your file needs to look like this example</h2>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Address line 1</th>
+            <th scope="col" class="govuk-table__header">Town or city</th>
+            <th scope="col" class="govuk-table__header">Postcode</th>
+            <th scope="col" class="govuk-table__header">7 more columns</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">11 Bilton Road</th>
+            <td class="govuk-table__cell">Carmouth</td>
+            <td class="govuk-table__cell">CM13 1AA</td>
+            <td class="govuk-table__cell"><a href="#">View all</a></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <p class="govuk-body"><a href="#">Download template</a></p>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

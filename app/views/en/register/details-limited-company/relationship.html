@@ -1,0 +1,70 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/name-relationship"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+
+        <form action="./method-volume" method="post" novalidate >
+
+          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Who is your role with this company?
+              </h1>
+            </legend>
+          </fieldset>
+
+          <br>
+          <p id="call-out-gov-wales" style="background: #fff;">
+            <span style="font-weight: 400;">Company</span> Bluebird Holidays Limited
+          </p>
+          <br>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Role
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+                  <label class="govuk-label govuk-radios__label" for="changedName">
+                    I am a director of the company
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+                  <label class="govuk-label govuk-radios__label" for="changedName-2">
+                    I am a employee at the compaby
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+                  <label class="govuk-label govuk-radios__label" for="changedName-2">
+                    I represent the limited company, includes property management companies and accountancies
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <br><br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Save and continue
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

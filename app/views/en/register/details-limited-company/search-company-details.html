@@ -1,0 +1,51 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/search-company-details"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+          <form action="./preview-company-details" method="post" novalidate >
+
+            <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What is the company called?
+                </h1>
+              </legend>
+              <br>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="address-town">
+                  Search Companies House register
+                </label>
+                <select class="govuk-select govuk-input--width-20" name="town-city-one" id="choose-country" data-module="autocomplete">
+                  {% include "components/area/select-options.html" %}
+                </select>
+              </div>
+
+            </fieldset>
+
+            <br><br>
+
+            <div class="govuk-button-group">
+              <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+                Save and continue
+              </button>
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="secondary-button-gov-wales">
+                Add details manually
+              </button>
+            </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+  
+{% endblock %}

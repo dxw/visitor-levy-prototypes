@@ -1,0 +1,55 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/preview-company-details"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <h1 class="govuk-heading-l" style="margin-bottom: 5px;">
+          Is this the company?
+        </h1>
+        <br>
+
+        <table id="call-out-table-gov-wales">
+          <tr>
+            <td style="padding-bottom: 10px">Company name:</td>
+            <td style="padding-bottom: 10px" id="table-cell">Bluebird Holidays Limited</td>
+          </tr>
+          <tr>
+            <td style="padding-bottom: 10px; vertical-align: top;">Companies House number:</td>
+            <td style="padding-bottom: 10px" id="table-cell"><a href="#">06617101</a>
+          </tr>
+          <tr>
+            <td style="padding-bottom: 10px; vertical-align: top;">Company address:</td>
+            <td style="padding-bottom: 10px" id="table-cell">68 14 Harper Mews<br>
+                Swandiff<br>
+                SD16 4LF</td>
+          </tr>
+          <tr>
+            <td style="padding-bottom: 10px">Registered:</td>
+            <td style="padding-bottom: 10px" id="table-cell">29 July 2015</td>
+          </tr>
+        </table>
+
+        <br>
+        <form action="./relationship" method="post" novalidate >
+          <div class="govuk-button-group">
+            <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+              Save and continue
+            </button>
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="secondary-button-gov-wales">
+              Search again
+            </button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
