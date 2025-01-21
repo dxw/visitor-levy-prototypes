@@ -13,6 +13,62 @@ router.get("/", function (request, response) {
 });
 
 // Filter out accommodation not in Wales
+router.post('/en/register/nation/v1/not-suitable', function(request, response) {
+
+    var country = request.session.data['country']
+
+    if (country == "wls"){
+        response.redirect("/en/register/login/v1/email");
+
+    } else if (country == "wls,eng"){
+        response.redirect("/en/register/login/v1/email");
+
+    } else if (country == "wls,eng,sct"){
+        response.redirect("/en/register/login/v1/email");
+
+    } else if (country == "wls,eng,sct,ni"){
+        response.redirect("/en/register/login/v1/email");
+
+    } else if (country == "wls,sct"){
+        response.redirect("/en/register/login/v1/email");
+
+    } else if (country == "wls,sct,ni"){
+        response.redirect("/en/register/login/v1/email");
+
+    } else if (country == "wls,eng,ni"){
+        response.redirect("/en/register/login/v1/email");
+
+    } else if (country == "wls,ni"){
+        response.redirect("/en/register/login/v1/email");
+    
+    } else {
+        response.redirect("/en/register/nation/v1/not-suitable")
+    }
+})
+
+// Property ownership routing
+router.post('/en/register/details-sole-trader/v1/name', function(request, response) {
+
+    var ownership = request.session.data['ownership']
+
+    if (ownership == "company"){
+        response.redirect("/en/register/details-limited-company/v1/search-company-details");
+
+    } else if (ownership == "partnership"){
+        response.redirect("/en/register/partnership/v1/");
+
+    } else if (ownership == "charity"){
+        response.redirect("/en/register/details-charity/v1/search-charity-details");
+
+    } else if (ownership == "multiple"){
+        response.redirect("/en/register/details-multiple/v1");
+    
+    } else {
+        response.redirect("/en/register/details-sole-trader/v1/name")
+    }
+})
+
+// Filter out accommodation not in Wales
 router.post('/en/spring-24/register/not-suitable-country', function(request, response) {
 
     var country = request.session.data['country']
