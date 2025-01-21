@@ -12,6 +12,7 @@ router.get("/", function (request, response) {
   response.redirect('/en/index')
 });
 
+
 // Filter out accommodation not in Wales
 router.post('/en/register/nation/v1/not-suitable', function(request, response) {
 
@@ -67,6 +68,19 @@ router.post('/en/register/details-sole-trader/v1/name', function(request, respon
         response.redirect("/en/register/details-sole-trader/v1/name")
     }
 })
+
+// Trading name - sole trader
+router.post('/en/register/details-sole-trader/v1/business-address', function(request, response) {
+
+    var hasTradingName = request.session.data['hasTradingName']
+    if (hasTradingName == "yes"){
+        response.redirect("/en/register/details-sole-trader/v1/trading-name")
+    } else {
+        response.redirect("/en/register/details-sole-trader/v1/business-address")
+    }
+})
+
+// routes from SPRING 2024 work 👇
 
 // Filter out accommodation not in Wales
 router.post('/en/spring-24/register/not-suitable-country', function(request, response) {

@@ -1,0 +1,114 @@
+{% extends "layouts/public-register.html" %}
+
+{% block pageTitle %}
+  Visitor levy prototypes
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="./homepage" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 20px; margin-bottom: 0px;">Search public register
+  </a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-summary-card" style="background: #f1f1f1; border: 10px solid #0360a6;">
+        <div class="govuk-summary-card__title-wrapper" style="background: #0360a6; padding-top: 5px;">
+          <h2 class="govuk-summary-card__title" style="color: #fff;">  71 Nunney Avenue, Swandiff, SD32 8AF</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Property ID
+              </dt>
+              <dd class="govuk-summary-list__value">
+                87219786
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date registered
+              </dt>
+              <dd class="govuk-summary-list__value">
+                27 January 2026
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Council
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Swandiff Council
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Self-catering
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Provider name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Bluebird Holidays Limited
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Provider type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Limited company
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Companie House number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#">06617101</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-m">Responsible for this accommodation?</h2>
+      <p class="govuk-body">You can update this record by signing in with your registered email.</p>
+
+      <form action="#" method="post" novalidate >
+
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="secondary-button-gov-wales">
+            Sign in
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">Something wrong?</h2>
+      <p class="govuk-body">You can report this proerty if it doesn't meet <a href="#">legal standards</a> for accommodation in Wales.</p>
+
+      <form action="#" method="post" novalidate >
+
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="secondary-button-gov-wales">
+            Report this property
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
