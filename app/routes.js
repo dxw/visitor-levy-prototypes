@@ -69,6 +69,17 @@ router.post('/en/register/details-sole-trader/v1/name', function(request, respon
     }
 })
 
+// Trading name - sole trader
+router.post('/en/register/details-sole-trader/v1/trading-name', function(request, response) {
+
+    var hasTradingName = request.session.data['hasTradingName']
+    if (hasTradingName == "no"){
+        response.redirect("/en/register/details-sole-trader/v1/business-address")
+    } else {
+        response.redirect("/en/register/details-sole-trader/v1/trading-name")
+    }
+})
+
 // Trading name - limited company
 router.post('/en/register/details-limited-company/v1/trading-name', function(request, response) {
 
