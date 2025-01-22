@@ -53,7 +53,7 @@ router.post('/en/register/details-sole-trader/v1/name', function(request, respon
     var ownership = request.session.data['ownership']
 
     if (ownership == "company"){
-        response.redirect("/en/register/details-limited-company/v1/search-company-details");
+        response.redirect("/en/register/details-limited-company/v1/name");
 
     } else if (ownership == "partnership"){
         response.redirect("/en/register/partnership/v1/");
@@ -69,14 +69,14 @@ router.post('/en/register/details-sole-trader/v1/name', function(request, respon
     }
 })
 
-// Trading name - sole trader
-router.post('/en/register/details-sole-trader/v1/business-address', function(request, response) {
+// Trading name - limited company
+router.post('/en/register/details-limited-company/v1/trading-name', function(request, response) {
 
     var hasTradingName = request.session.data['hasTradingName']
-    if (hasTradingName == "yes"){
-        response.redirect("/en/register/details-sole-trader/v1/trading-name")
+    if (hasTradingName == "no"){
+        response.redirect("/en/register/address/v1/postcode")
     } else {
-        response.redirect("/en/register/details-sole-trader/v1/business-address")
+        response.redirect("/en/register/details-limited-company/v1/trading-name")
     }
 })
 
