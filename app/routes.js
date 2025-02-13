@@ -48,24 +48,27 @@ router.post('/en/register/nation/v1/not-suitable', function(request, response) {
 })
 
 // Property ownership routing
-router.post('/en/register/details-sole-trader/v1/name', function(request, response) {
+router.post('/en/register/details-limited-company/v1/name', function(request, response) {
 
     var ownership = request.session.data['ownership']
 
-    if (ownership == "company"){
-        response.redirect("/en/register/details-limited-company/v1/name");
+    if (ownership == "soletrader"){
+        response.redirect("/en/register/details-sole-trader/v1/name");
 
     } else if (ownership == "partnership"){
-        response.redirect("/en/register/partnership/v1/");
+        response.redirect("/en/register/details-partnership/v1/trading-name-question");
 
     } else if (ownership == "charity"){
         response.redirect("/en/register/details-charity/v1/search-charity-details");
 
     } else if (ownership == "multiple"){
         response.redirect("/en/register/details-multiple/v1");
+
+    } else if (ownership == "NotSure"){
+        response.redirect("/en/register/details-sole-trader/v1/name");
     
     } else {
-        response.redirect("/en/register/details-sole-trader/v1/name")
+        response.redirect("/en/register/details-limited-company/v1/name")
     }
 })
 
@@ -90,6 +93,43 @@ router.post('/en/register/details-limited-company/v1/trading-name', function(req
         response.redirect("/en/register/details-limited-company/v1/trading-name")
     }
 })
+
+// Trading name - partnership
+router.post('/en/register/details-partnership/v1/trading-name', function(request, response) {
+
+    var hasTradingName = request.session.data['hasTradingName']
+    if (hasTradingName == "no"){
+        response.redirect("/en/register/details-partnership/v1/relationship")
+    } else {
+        response.redirect("/en/register/details-partnership/v1/trading-name")
+    }
+})
+
+// Filter out accommodation not in Wales
+router.post('/en/register/details-partnership/v1/business-address', function(request, response) {
+
+    var Add2ndPartner = request.session.data['Add2ndPartner']
+    var Add3rdPartner = request.session.data['Add3rdPartner']
+    var Add4thPartner = request.session.data['Add4thPartner']
+    var Add5thPartner = request.session.data['Add5thPartner']
+
+    if (Add2ndPartner == "yes" && Add3rdPartner == "yes" && Add4thPartner == "yes" && Add5thPartner == "no" ){
+        response.redirect("/en/register/details-partnership/v1/business-address-alt");
+
+    } else if (Add2ndPartner == "yes" && Add3rdPartner == "yes" && Add4thPartner == "yes"){
+        response.redirect("/en/register/details-partnership/v1/partner-4th");
+
+    } else if (Add2ndPartner == "yes" && Add3rdPartner == "yes"){
+        response.redirect("/en/register/details-partnership/v1/partner-3rd");
+
+    } else if (Add2ndPartner == "yes"){
+        response.redirect("/en/register/details-partnership/v1/partner-2nd");
+
+    } else {
+        response.redirect("/en/register/details-partnership/v1/business-address")
+    }
+})
+
 
 // routes from SPRING 2024 work 👇
 

@@ -1,0 +1,214 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/check-answers"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <h1 class="govuk-heading-l">Business partners</h1>
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">Partner 1</h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> partner</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['fullName'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Email address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['email'] }}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        {% if data.Add2ndPartner=="yes" %}
+          <div class="govuk-summary-card" id="summary-card">
+            <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+              <h2 class="govuk-summary-card__title">Partner 2</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> partner</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['2ndPartnerName'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['2ndPartnerEmail'] }}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if data.Add3rdPartner=="yes" %}
+          <div class="govuk-summary-card" id="summary-card">
+            <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+              <h2 class="govuk-summary-card__title">Partner 3</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> partner</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['3rdPartnerName'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['3rdPartnerEmail'] }}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if data.Add4thPartner=="yes" %}
+          <div class="govuk-summary-card" id="summary-card">
+            <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+              <h2 class="govuk-summary-card__title">Partner 4</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> partner</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['4thPartnerName'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['4thPartnerEmail'] }}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        {% endif %}
+
+        <form action="./business-address" method="post" novalidate >
+
+          <!-- add 4th partner -->
+          {% if data.Add2ndPartner=="yes" and data.Add3rdPartner=="yes" and data.Add4thPartner=="yes" %}
+
+            <div class="govuk-button-group">
+              <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales" name="Add5thPartner" value="yes">
+                Add another partner
+              </button>
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="secondary-button-gov-wales" name="Add5thPartner" value="no">
+                Save and continue
+              </button>
+            </div>
+
+          <!-- add 4th partner -->  
+          {% elif data.Add2ndPartner=="yes" and data.Add3rdPartner=="yes"  %}
+
+            <div class="govuk-button-group">
+              <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales" name="Add4thPartner" value="yes">
+                Add another partner
+              </button>
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="secondary-button-gov-wales" name="Add4thPartner" value="no">
+                Save and continue
+              </button>
+            </div>
+
+          <!-- add 3rd partner -->  
+          {% elif data.Add2ndPartner=="yes" %}
+
+            <div class="govuk-button-group">
+              <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales" name="Add3rdPartner" value="yes">
+                Add another partner
+              </button>
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="secondary-button-gov-wales" name="Add3rdPartner" value="no">
+                Save and continue
+              </button>
+            </div>
+          
+          <!-- add 2nd partner -->
+          {% else %}
+
+            <div class="govuk-button-group">
+              <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales" name="Add2ndPartner" value="yes">
+                Add another partner
+              </button>
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="secondary-button-gov-wales" name="Add2ndPartner" value="no">
+                Save and continue
+              </button>
+            </div>
+
+          {% endif %}
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
