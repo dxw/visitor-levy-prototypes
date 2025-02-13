@@ -1,0 +1,66 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/name-relationship"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+
+        <form action="./start-date-question" method="post" novalidate >
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is your registered business address?
+              </h1>
+            </legend>
+            <p class="">This is the same address you have registered to pay tax on the money your business makes.</p>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-line-1">
+                Address line 1
+              </label>
+              <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-line-2">
+                Address line 2 (optional)
+              </label>
+              <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-town">
+                Town or city
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-county">
+                County (optional)
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-postcode">
+                Postcode
+              </label>
+              <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+            </div>
+          </fieldset>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Save and continue
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
