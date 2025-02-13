@@ -1,0 +1,61 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/name-relationship"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+
+        <form action="./name" method="post" novalidate >
+
+          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is your role with the business?
+              </h1>
+            </legend>
+          </fieldset>
+
+          <br>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+                  <label class="govuk-label govuk-radios__label" for="changedName">
+                    I am the owner of the business
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+                  <label class="govuk-label govuk-radios__label" for="changedName-2">
+                    I am a employee of the business
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+                  <label class="govuk-label govuk-radios__label" for="changedName-2">
+                    I represent the business, includes property management companies and accountancies
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <br><br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Save and continue
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

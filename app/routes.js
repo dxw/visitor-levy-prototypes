@@ -48,15 +48,15 @@ router.post('/en/register/nation/v1/not-suitable', function(request, response) {
 })
 
 // Property ownership routing
-router.post('/en/register/details-limited-company/v1/name', function(request, response) {
+router.post('/en/register/details-limited-company/v1/search-company-details', function(request, response) {
 
     var ownership = request.session.data['ownership']
 
     if (ownership == "soletrader"){
-        response.redirect("/en/register/details-sole-trader/v1/name");
+        response.redirect("/en/register/details-sole-trader/v1/trading-name-question");
 
     } else if (ownership == "partnership"){
-        response.redirect("/en/register/details-partnership/v1/trading-name-question");
+        response.redirect("/en/register/details-partnership/v1/relationship");
 
     } else if (ownership == "charity"){
         response.redirect("/en/register/details-charity/v1/search-charity-details");
@@ -65,10 +65,10 @@ router.post('/en/register/details-limited-company/v1/name', function(request, re
         response.redirect("/en/register/details-multiple/v1");
 
     } else if (ownership == "NotSure"){
-        response.redirect("/en/register/details-sole-trader/v1/name");
+        response.redirect("/en/register/details-sole-trader/v1/trading-name-question");
     
     } else {
-        response.redirect("/en/register/details-limited-company/v1/name")
+        response.redirect("/en/register/details-limited-company/v1/search-company-details")
     }
 })
 
