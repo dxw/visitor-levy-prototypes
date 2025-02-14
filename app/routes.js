@@ -116,8 +116,14 @@ router.post('/en/register/details-partnership/v1/business-address', function(req
     if (Add2ndPartner == "yes" && Add3rdPartner == "yes" && Add4thPartner == "yes" && Add5thPartner == "no" ){
         response.redirect("/en/register/details-partnership/v1/business-address-alt");
 
+    } else if (Add2ndPartner == "yes" && Add3rdPartner == "yes" && Add4thPartner == "no"){
+        response.redirect("/en/register/details-partnership/v1/business-address-alt");
+
     } else if (Add2ndPartner == "yes" && Add3rdPartner == "yes" && Add4thPartner == "yes"){
         response.redirect("/en/register/details-partnership/v1/partner-4th");
+
+    } else if (Add2ndPartner == "yes" && Add3rdPartner == "no"){
+        response.redirect("/en/register/details-partnership/v1/business-address-alt");
 
     } else if (Add2ndPartner == "yes" && Add3rdPartner == "yes"){
         response.redirect("/en/register/details-partnership/v1/partner-3rd");
