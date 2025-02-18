@@ -13,11 +13,7 @@
 
         <div class="govuk-summary-card" id="summary-card">
           <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
-            <h2 class="govuk-summary-card__title">71 Nunney Avenue, Swandiff, SD32 8AF</h2>
-            <ul class="govuk-summary-card__actions">
-              <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> property details</span></a>
-              </li>
-            </ul>
+            <h2 class="govuk-summary-card__title">Business details</h2>
           </div>
           <div class="govuk-summary-card__content">
             <dl class="govuk-summary-list">
@@ -26,48 +22,32 @@
                   Type
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Self-catering
+                  {{ data['ownership'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Rooms
+                  Name
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  3
+                  {{ data['fullName'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Maximum capacity
+                  Email address
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  6 people
+                  {{ data['email'] }}
                 </dd>
-              </div>
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Shared facilities
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  No
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Council
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  Swandiff Council
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Conact
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  Nadiya Kanaa<br>
-                  nadiya@blueblueholidays.com
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -75,35 +55,260 @@
                   Role
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  I am a director of the company
+                  {{ data['relationship'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+              {% if data.ownership=="Limited company" %}
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Company name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['company-name'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Company number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['company-number'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </div>
+              {% endif %}
+              {% if data.ownership=="Partnership" %}
+                {% if data.Add2ndPartner=="yes" %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Partner 2 name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['2ndPartnerName'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Partner 2 email
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['2ndPartnerEmail'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                    </dd>
+                  </div>
+                {% endif %}
+                {% if data.Add3rdPartner=="yes" %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Partner 3 name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['3rdPartnerName'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Partner 3 email
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['3rdPartnerEmail'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                    </dd>
+                  </div>
+                {% endif %}
+                {% if data.Add4thPartner=="yes" %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Partner 4 name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['4thPartnerName'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Partner 4 email
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['4thPartnerEmail'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                    </dd>
+                  </div>
+                {% endif %}
+              {% endif %}
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['businessAddressLine1'] }}<br>
+                  {% if data.businessAddressLine2=="" %}
+                    <!-- blank as no 2nd line was entered -->
+                  {% else %}
+                    {{ data['businessAddressLine2'] }}<br>
+                  {% endif %}
+                  {{ data['businessAddressTown'] }}<br>
+                  {% if data.businessAddressCounty=="" %}
+                    <!-- blank as no 2nd line was entered -->
+                  {% else %}
+                    {{ data['businessAddressCounty'] }}<br>
+                  {% endif %}
+                  {{ data['businessAddressPostcode'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Liable party
+                  {% if data.startedTrading=="yes" %}
+                    <h1 class="govuk-fieldset__heading">
+                      Started trading
+                    </h1>
+                  {% endif %}
+                  {% if data.startedTrading=="no" %}
+                    <h1 class="govuk-fieldset__heading">
+                      Trading starts
+                    </h1>
+                  {% endif %}
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Bluebird Holidays Limited
+                  {{ data['started-trading-day'] }} {{ data['started-trading-month'] }} {{ data['started-trading-year'] }}                
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Companies House number
+                  Trading name
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  <a href="#">06617101</a>
+                  {% if data.hasTradingName=="no" %}
+                    {{ data['hasTradingName'] }}
+                  {% else %}
+                    {{ data['TradingName'] }}
+                  {% endif %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">Property details</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['address-selected'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Company address
+                  Local authority
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  14 Harper Mews<br>
-                  Swandiff<br>
-                  SD16 4LF
+                  Swandiff Council
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
                 </dd>
               </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Accommodation
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['type'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                {% if data.type=="Campsite" %}
+                  Pitches
+                {% endif %}
+                {% if data.type=="Hotel" %}
+                  Bedrooms
+                {% endif %}
+                {% if data.type=="Self catering" %}
+                  Bedrooms
+                {% endif %}
+                {% if data.type=="Bed and breakfast" %}
+                  Bedrooms
+                {% endif %}
+                {% if data.type=="Other" %}
+                  Units
+                {% endif %}
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['units'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Sleeping capacity
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['capacity'] }} people
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+              <!--
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Shared facilities
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['facilities'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+              -->
             </dl>
           </div>
         </div>

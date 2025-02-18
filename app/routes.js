@@ -48,27 +48,27 @@ router.post('/en/register/nation/v1/not-suitable', function(request, response) {
 })
 
 // Property ownership routing
-router.post('/en/register/details-limited-company/v1/search-company-details', function(request, response) {
+router.post('/en/register/details-limited-company/v1/relationship', function(request, response) {
 
     var ownership = request.session.data['ownership']
 
-    if (ownership == "soletrader"){
-        response.redirect("/en/register/details-sole-trader/v1/trading-name-question");
+    if (ownership == "Sole trader"){
+        response.redirect("/en/register/details-sole-trader/v1/relationship");
 
-    } else if (ownership == "partnership"){
+    } else if (ownership == "Partnership"){
         response.redirect("/en/register/details-partnership/v1/relationship");
 
-    } else if (ownership == "charity"){
-        response.redirect("/en/register/details-charity/v1/search-charity-details");
+    } else if (ownership == "Charity"){
+        response.redirect("/en/register/details-charity/v1/relationship");
 
-    } else if (ownership == "multiple"){
+    } else if (ownership == "Multiple"){
         response.redirect("/en/register/details-multiple/v1");
 
-    } else if (ownership == "NotSure"){
-        response.redirect("/en/register/details-sole-trader/v1/trading-name-question");
+    } else if (ownership == "Not sure"){
+        response.redirect("/en/register/details-sole-trader/v1/relationship");
     
     } else {
-        response.redirect("/en/register/details-limited-company/v1/search-company-details")
+        response.redirect("/en/register/details-limited-company/v1/relationship")
     }
 })
 
@@ -77,7 +77,7 @@ router.post('/en/register/details-sole-trader/v1/trading-name', function(request
 
     var hasTradingName = request.session.data['hasTradingName']
     if (hasTradingName == "no"){
-        response.redirect("/en/register/details-sole-trader/v1/business-address")
+        response.redirect("/en/register/address/v1/postcode")
     } else {
         response.redirect("/en/register/details-sole-trader/v1/trading-name")
     }
@@ -99,7 +99,7 @@ router.post('/en/register/details-partnership/v1/trading-name', function(request
 
     var hasTradingName = request.session.data['hasTradingName']
     if (hasTradingName == "no"){
-        response.redirect("/en/register/details-partnership/v1/relationship")
+        response.redirect("/en/register/address/v1/postcode")
     } else {
         response.redirect("/en/register/details-partnership/v1/trading-name")
     }

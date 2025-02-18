@@ -1,0 +1,53 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/name-relationship"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+
+        <form action="./business-address" method="post" novalidate >
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Limited company details
+              </h1>
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-line-1">
+                Full company name
+              </label>
+              <div id="event-name-hint" class="govuk-hint">
+                The name as it appears in <a href="https://find-and-update.company-information.service.gov.uk/" target="_blank" rel="noopener noreferrer">Companies House</a>
+              </div>
+              <input class="govuk-input" id="address-line-1" name="company-name" type="text" autocomplete="address-line1">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-postcode">
+                Company numnber
+              </label>
+              <div id="event-name-hint" class="govuk-hint">
+                8 digit number on <a href="https://find-and-update.company-information.service.gov.uk/" target="_blank" rel="noopener noreferrer">Companies House</a>, for example 06617101 
+              </div>
+              <input class="govuk-input govuk-input--width-10" id="address-postcode" name="company-number" type="text" autocomplete="postal-code">
+            </div>
+          </fieldset>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Save and continue
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

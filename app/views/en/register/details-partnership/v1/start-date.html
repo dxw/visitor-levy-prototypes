@@ -11,10 +11,10 @@
         <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
 
 
-        <form action="/en/register/address/v1/postcode" method="post" novalidate >
+        <form action="./trading-name-question" method="post" novalidate >
 
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="started-trading-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 {% if data.startedTrading=="yes" %}
                   <h1 class="govuk-fieldset__heading">
@@ -28,38 +28,38 @@
                 {% endif %}
               </legend>
               {% if data.startedTrading=="yes" %}
-                <div id="passport-issued-hint" class="govuk-hint">
+                <div id="started-trading-hint" class="govuk-hint">
                   For example, 27 3 2021
                 </div>
               {% endif %}
               {% if data.startedTrading=="no" %}
-                <div id="passport-issued-hint" class="govuk-hint">
+                <div id="started-trading-hint" class="govuk-hint">
                   For example, 27 10 2026
                 </div>
               {% endif %}
-              <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input" id="started-trading">
                 <div class="govuk-date-input__item">
                   <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                    <label class="govuk-label govuk-date-input__label" for="started-trading-day">
                       Day
                     </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="started-trading-day" name="started-trading-day" type="text" inputmode="numeric">
                   </div>
                 </div>
                 <div class="govuk-date-input__item">
                   <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                    <label class="govuk-label govuk-date-input__label" for="started-trading-month">
                       Month
                     </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="started-trading-month" name="started-trading-month" type="text" inputmode="numeric">
                   </div>
                 </div>
                 <div class="govuk-date-input__item">
                   <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                    <label class="govuk-label govuk-date-input__label" for="started-trading-year">
                       Year
                     </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="started-trading-year" name="started-trading-year" type="text" inputmode="numeric">
                   </div>
                 </div>
               </div>
