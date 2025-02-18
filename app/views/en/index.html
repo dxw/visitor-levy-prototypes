@@ -1,5 +1,6 @@
 {% extends "layouts/english-index.html" %}
-{% set alternateLink = "/cy/index"%}
+{% set alternateLink = "/cy/register/check-answers"%}
+{% set pageName="Visitor levy prototypes" %}
 
 {% block pageTitle %}
   Accommodation prototypes
@@ -14,259 +15,24 @@
 
     <!--{% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
 
-    <p class="govuk-body-l">Test the change</p>
+    <h1 class="govuk-heading-l">Test the new accommodation registration service</p>
 
-    <p class="govuk-body-l">We are a team at the Welsh Revenue Authority, implementing an <a href="https://www.gov.wales/registration-and-licensing-scheme-all-visitor-accommodation-wales">accommodation register</a> and <a href="https://www.gov.wales/a-visitor-levy-for-wales">visitor levy</a> in Wales.</p>
+    <p class="govuk-body">If you provide short-term accommodation in Wales, help test the early designs of the government's registration service.</p>
 
-    <p class="govuk-body-l">This website documents how someone who provides accommodation in Wales might use public services. As well how different back-office system work.</p> 
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span> You do not need to register before April 2026.
+      </strong>
+    </div>
 
-    <p class="govuk-body-l">The design work has been done in phases:</p>
+    <p class="govuk-body">This is not a real service and is just for testing early designs of the registration service. All designs will likely be different to the real service available from April 2026.</p>
 
-    <ul class="govuk-list govuk-list--bullet govuk-body-l">
-      <li>
-        <a href="#register">Register accommodation in Wales</a> (spring 2025)
-      </li>
-      <li>
-        <a href="#key-moments">Key moments end-to-end</a> (spring 2024) 
-      </li>
-    </ul>  
-    
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <div class="govuk-inset-text">
+      All information entered into this prototype test is not saved and is deleted when you close the website in your browser.
+    </div>
 
-    <span class="govuk-caption-l">Spring 2025</span>
-    <h1 class="govuk-heading-l" id="register">Register accommodation is Wales</h2>
-
-    <p class="govuk-body">The first service, people will have to register paid accommodation in Wales from 2026. The team aim in this phase, is to learn what the minimal viable registration service should include.</p> 
-
-    <ul class="govuk-list govuk-list--number">
-      <li><a href="#sprint-4">sprint 4 - matching the legislation</a></li>
-      <li><a href="#sprint-5">sprint 5 - save and return</a></li>
-      <li><a href="#sprint-6">sprint 6 - business details: partnership</a></li>
-    </ul>
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-    <span class="govuk-caption-m" id="sprint-6">Sprint 6 - Feb 2024</span>
-    <h2 class="govuk-heading-m">Remote testing</h2>
-
-    <p class="govuk-body">Testing remotely with dozens of accommodation providers. Researched using web analytics and surveying people after they've tried the prototyped.</p>
-
-    <ul class="govuk-list govuk-list--number" id="list-index">
-      <li>
-        <a href="./register/details-partnership/v1/relationship">Business details: partnership</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-    </ul>
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-    <span class="govuk-caption-m" id="sprint-5">Sprint 5 - Jan / Feb 2024</span>
-    <h2 class="govuk-heading-m">Save and return</h2>
-
-    <p class="govuk-body">What does the serivce look like when returning to an incomplete registration.</p>
-
-    <ul class="govuk-list govuk-list--number" id="list-index">
-      <li>
-        <a href="./register/save-return/v1/exit-question">Save and exit</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/save-return/task-list/v1">Return to incomplete registration</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-    </ul>
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-    <span class="govuk-caption-m" id="sprint-4">Sprint 4 - January 2024</span>
-    <h2 class="govuk-heading-m">Matching the legislation</h2>
-
-    <p class="govuk-body">Few changes to the prototype last changed in March 2024. Making sure it the prototype collects all the data set out in the legislation.</p>
-
-    <p class="govuk-body">The user journey for a sole trader was added, as the previous version just had add business details for a limited company. As well, manually entering business details, as they can't be pulled from a the Company House or Charity Commmission APIs for sole traders, who the team assumed will be the majority of users.</p>
-
-    <ul class="govuk-list govuk-list--number" id="list-index">
-      <li>
-        <a href="./register/start-page/v1">Start page</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/nation/v1">Nation question</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/login/v1/email">Login setup</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/ownership/v1/">Property ownership</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/details-sole-trader/v1/name">Business details: sole trader</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/details-limited-company/v1/search-company-details">Business details: limited company</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/address/v1/postcode">Property address</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/property-details/v1/type">Property type</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/public-register/v1/preview-public-information">Public register</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/check-answers/v1">Check answers</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/confirmation-page/v1">Confirmation page</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-      <li>
-        <a href="./register/confirmation-email/v1">Confirmation email</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
-      </li>
-    </ul>
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-    <span class="govuk-caption-l">Spring 2024</span>
-    <h1 class="govuk-heading-l" id="key-moments">Key moments end-to-end</h2>
-
-    <p class="govuk-body">We prototyped key moments across the first two years accommodation providers. Registering for the first time in 2026. Introduction of the visitor levy in 2027. And inevitably making changes in 2028, such as closing down a business.</p> 
-
-    <p class="govuk-body-m"><a href="/en/spring-24/writing">Read about the thinking behind these prototypes</a></p>   
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-    <span class="govuk-caption-m">Year 0</span>
-    <h2 class="govuk-heading-m">Register for the first time</h2>
-
-    <h3 class="govuk-heading-s">Accommodation providers</h3>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="./spring-24/register/association-email">Email from trade association
-        </a>
-      </li>
-      <li>
-        <a href="./spring-24/register/start">Start page followed by sign up and first registration
-        </a>
-      </li>
-      </li>
-      <li>
-        <a href="./spring-24/register/email-new-registration">Confirmation email of new registration
-        </a>
-      </li>
-      <li>
-        <a href="./spring-24/register/public/record">Public record in accommodation register
-        </a>
-      </li>
-      <li>
-        <a href="./spring-24/register/online-travel-agent">Registration pulled into an online travel agent
-        </a>
-      </li>
-    </ul>
-
-    <h3 class="govuk-heading-s">Back office staff</h3>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="./spring-24/register/backoffice/email">Sign-in for back office staff
-        </a>
-      </li>
-      <li>
-        <a href="./spring-24/register/backoffice/homepage">Homepage
-        </a>
-      </li>
-      <li>
-        <a href="./spring-24/register/backoffice/search-results">Search results
-        </a>
-      </li>
-    </ul>
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-    <span class="govuk-caption-m">Year 1</span>
-    <h2 class="govuk-heading-m">Local council starts a levy</h2>
-
-    <h3 class="govuk-heading-s">Accommodation providers</h3>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="./spring-24/levy/email-council-consultation">Email about consultation by council</a>
-      </li>
-      <li>
-        <a href="./spring-24/levy/email-council-levy-starts-soon">Email about introduction of local levy
-        </a>
-      </li>
-      <li>
-        <a href="./spring-24/levy/email">Login page</a></li>
-      <li>
-        <a href="./spring-24/levy/homepage">Account homepage with notification banner</a>
-      </li>  
-      <li>
-        <a href="./spring-24/levy/public-dashboard">How council spends visitor levy</a>
-      </li>   
-    </ul>
-
-    <h3 class="govuk-heading-s">Back office staff</h3>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="./spring-24/levy/backoffice/consultation/local-authorities">
-        Trigger consultation
-        </a>
-      </li> 
-      <li>
-        <a href="./spring-24/levy/backoffice/start-levy/swandiff-council">
-        Start visitor levy in Swandiff
-        </a>
-      </li> 
-    </ul>
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-    <span class="govuk-caption-m">Year 2</span>
-    <h2 class="govuk-heading-m">Making changes to the register</h2>
-
-    <h2 class="govuk-heading-s">Accommodation provider sees</h2>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="./spring-24/middles-ends/homepage">
-          De-register a property
-        </a>
-      </li>
-      <li>
-        <a href="./spring-24/middles-ends/homepage">
-          Add more properties
-        </a>
-      </li>
-      <li>
-        <a href="./spring-24/middles-ends/email-request">
-          Email request to take on a property
-        </a>
-      </li>
-      <li>
-        <a href="./spring-24/middles-ends/email-companies-house-push">
-          Push notification trigged from Companies House
-        </a>
-      </li>
-      <li>
-        <a href="./spring-24/middles-ends/settings">
-          Stop being a liable person
-        </a>
-      </li>
-    </ul>  
-
-    <h3 class="govuk-heading-s">Back office staff</h3>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="./spring-24/middles-ends/backoffice/homepage">
-        Chasing unfinish levy returns and payments
-        </a>
-      </li> 
-      <li>
-        <a href="./spring-24/middles-ends/backoffice/council/email">
-        Local council view
-        </a>
-      </li> 
-    </ul> 
+    <p class="govuk-body-l"><a href="./register/start-page/v1">Start test of registration service</a></p> 
 
   </div>
 </div>
