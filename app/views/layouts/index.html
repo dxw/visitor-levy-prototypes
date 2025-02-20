@@ -7,8 +7,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {% set htmlLang = currentLanguage %}
 
-{% block head %}
-  {{ super() }}
+{% block header %}
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VVBBQPEWN3"></script>
 	<script>
@@ -18,9 +17,6 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 	  gtag('config', 'G-VVBBQPEWN3');
 	</script>
-{% endblock %}
-
-{% block header %}
 	<header class="govuk-header " role="banner" data-module="govuk-header" style="background-color: #fff; border-bottom: 2px solid #e5e5e5;">
 	  <div class="govuk-header__container govuk-width-container" style="border-bottom: 10px solid transparent;">
 	        <span class="govuk-header__logotype" style="padding-top: 4px; padding-bottom: 10px; color: #1f1f1f;">
