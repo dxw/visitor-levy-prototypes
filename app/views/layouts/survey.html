@@ -9,30 +9,44 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {% block head %}
   {{ super() }}
-	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VVBBQPEWN3"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
 
+	  function gtag() {
+	    dataLayer.push(arguments);
+	  }
+	  gtag('js', new Date());
 	  gtag('config', 'G-VVBBQPEWN3');
 	</script>
 {% endblock %}
 
 {% block header %}
-	<header class="govuk-header " role="banner" data-module="govuk-header" style="background-color: #fff; border-bottom: 2px solid #e5e5e5;">
+	<header class="govuk-header " role="banner" data-module="govuk-header" style="background-color: #F8D756;">
 	  <div class="govuk-header__container govuk-width-container" style="border-bottom: 10px solid transparent;">
-	        <span class="govuk-header__logotype" style="padding-top: 4px; padding-bottom: 10px; color: #1f1f1f;">
-	        	<h3><span class="govuk-!-font-weight-bold">This is not a real service</span></h3>
+	        <span class="govuk-header__logotype" style="padding-top: 10px; padding-bottom: 10px;">
+	        	<h3><span style="padding: 5px 10px 5px 10px; background-color: #3F3A27; color: #F8D756;">accommodation.gov.wales</span> <span class="govuk-!-font-weight-regular" style="padding-left: 7px; color: #323232;">this is not a real service</span></h3>
 	        </span>
-      		{% block languageToggle %}
-			{% endblock %}
+          {% block languageToggle %}
+					{% endblock %}
 	  </div>
 	</header>
+
 {% endblock %}
 
 {% block footer %}
+<footer class="govuk-footer" role="contentinfo" style="background-color: #0360a6; border-top: 0px grey solid;">
+	<div class="govuk-width-container">
+	<div class="govuk-footer__meta">
+	  <div class="govuk-footer__meta-item govuk-footer__meta-item--grow" style="margin-bottom: 15px;">
+      <div id="survey-button" class="govuk-button-group" style="margin-bottom: 0px;">
+        <a href="https://surveys.wra.gov.wales/s/registration-prototype-feedback/" class="govuk-button govuk-button--secondary" id="secondary-button-gov-wales" style="border-color: #fff; background: #0360a6; color: #ffffff; margin-bottom: 0px">Give feedback using survey</a>
+      </div>
+	  </div>
+
+	</div>
+	</div>
+</footer>
 <footer class="govuk-footer" role="contentinfo" style="background-color: #eeeeee; border-top: 0px grey solid;">
 	<div class="govuk-width-container">
 	<div class="govuk-footer__meta">
@@ -45,25 +59,6 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 			{% endif %}
 			</h2>
 	    <ul class="govuk-footer__inline-list">
-	      <li class="govuk-footer__inline-list-item">
-	        <a class="govuk-footer__link" href="/manage-prototype">
-					{% if currentLanguage == 'en'%}
-	          Manage this prototype
-					{% else %}
-						Manage this prototype {# add welsh translation here #}
-					{% endif %}
-	        </a>
-	      </li>
-	      <li class="govuk-footer__inline-list-item">
-	        <a class="govuk-footer__link" href="https://github.com/dxw/visitor-levy-prototypes">
-					{% if currentLanguage == 'en'%}
-	          Code this prototype is made of
-					{% else %}
-						Code prototype is made of  {# add welsh translation here #}
-					{% endif %}
-	          
-	        </a>
-	      </li>
 	      <li class="govuk-footer__inline-list-item">
 	        <a class="govuk-footer__link" href="/manage-prototype/clear-data">
 					{% if currentLanguage == 'en'%}
@@ -105,6 +100,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 	        rel="license">Open Government Licence v3.0</a>, except where otherwise stated
 	    </span>
 	  </div>
+
 	</div>
 	</div>
 </footer>

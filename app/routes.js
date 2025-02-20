@@ -91,6 +91,44 @@ router.post('/en/register/details-sole-trader/v1/name-owner', function(request, 
     }
 })
 
+// Role - limited company
+router.post('/en/register/details-limited-company/v1/name-owner', function(request, response) {
+
+    var relationship = request.session.data['relationship']
+
+    if (relationship == "Employee"){
+        response.redirect("/en/register/details-limited-company/v1/name-employee");
+
+    } else if (relationship == "Property management company"){
+        response.redirect("/en/register/details-limited-company/v1/name-management-company");
+
+    } else if (relationship == "Family or friend"){
+        response.redirect("/en/register/details-limited-company/v1/name-friend-family");
+    
+    } else {
+        response.redirect("/en/register/details-limited-company/v1/name-owner")
+    }
+})
+
+// Role - partnership
+router.post('/en/register/details-partnership/v1/name-owner', function(request, response) {
+
+    var relationship = request.session.data['relationship']
+
+    if (relationship == "Employee"){
+        response.redirect("/en/register/details-partnership/v1/name-employee");
+
+    } else if (relationship == "Property management company"){
+        response.redirect("/en/register/details-partnership/v1/name-management-company");
+
+    } else if (relationship == "Family or friend"){
+        response.redirect("/en/register/details-partnership/v1/name-friend-family");
+    
+    } else {
+        response.redirect("/en/register/details-partnership/v1/name-owner")
+    }
+})
+
 // Trading name - sole trader
 router.post('/en/register/details-sole-trader/v1/trading-name', function(request, response) {
 

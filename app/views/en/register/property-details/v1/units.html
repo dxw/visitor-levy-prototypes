@@ -14,32 +14,46 @@
 
         <form class="form" action="/en/middles-ends/select-address-add-more" method="post">
 
+          {{ data['type'] }}
+
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                {% if data.type=="Campsite" %}
+                {% if data.type=="Campsite or caravan park" %}
                   <h1 class="govuk-fieldset__heading">
-                    How many pitches does the site have?
+                    How many pitches does the property have?
                   </h1>
-                {% endif %}
-                {% if data.type=="Hotel" %}
-                  <h1 class="govuk-fieldset__heading">
-                    How many bedrooms does the hotel have?
-                  </h1>
-                {% endif %}
-                {% if data.type=="Self catering" %}
-                  <h1 class="govuk-fieldset__heading">
-                    How many bedrooms does the property have?
-                  </h1>
-                {% endif %}
-                {% if data.type=="Bed and breakfast" %}
-                  <h1 class="govuk-fieldset__heading">
-                    How many bedrooms does the property have?
-                  </h1>
-                {% endif %}
-                {% if data.type=="Other" %}
+                {% elif data.type=="Other" %}
                   <h1 class="govuk-fieldset__heading">
                     How many sleeping units does the property have?
+                  </h1>
+                {% elif data.type=="Campsite or caravan park,Hotel" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many pitches and bedrooms does the property have?
+                  </h1>
+                {% elif data.type=="Campsite or caravan park,Self-catering" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many pitches and bedrooms does the property have?
+                  </h1>                
+                {% elif data.type=="Campsite or caravan park,Bed and breakfast" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many pitches and bedrooms does the property have?
+                  </h1>  
+                {% elif data.type=="Campsite or caravan park,Hotel,Self-catering" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many pitches and bedrooms does the property have?
+                  </h1>                
+                {% elif data.type=="Campsite or caravan park,Self-catering,Bed and breakfast" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many pitches and bedrooms does the property have?
+                  </h1>   
+                {% elif data.type=="Campsite or caravan park,Hotel,Self-catering,Bed and breakfast" %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many pitches and bedrooms does the property have?
+                  </h1>                
+                {% else %}
+                  <h1 class="govuk-fieldset__heading">
+                    How many bedrooms does the property have?
                   </h1>
                 {% endif %}
               </legend>

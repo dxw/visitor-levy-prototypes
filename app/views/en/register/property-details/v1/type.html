@@ -12,59 +12,54 @@
 
           <form action="./units" method="post" novalidate >
 
-            <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  What type of accommodation are you registering?
-                </h1>
-              </legend>
-              <br>
-              <p id="call-out-gov-wales" style="background: #fff;">71 Nunney Avenue, Swandiff, SD32 8AF</p>
-              <br>
-
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="signIn" name="type" type="radio" value="Campsite" aria-describedby="proerty-type-item-hint">
-                  <label class="govuk-label govuk-radios__label" for="signIn">
-                    Campsite or caravan park
-                  </label>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="facilities-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What type of accommodation is the property?
+                  </h1>
+                </legend>
+                <br>
+                <p id="call-out-gov-wales" style="background: #fff;">71 Nunney Avenue, Swandiff, SD32 8AF</p>
+                <br>
+                <div id="facilities-hint" class="govuk-hint">
+                  Select all types that apply
                 </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="signIn-2" name="type" type="radio" value="Hotel" aria-describedby="proerty-type-item-2-hint">
-                  <label class="govuk-label govuk-radios__label" for="signIn-2">
-                    Hotel
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="signIn" name="type" type="radio" value="Self catering" aria-describedby="proerty-type-item-hint">
-                  <label class="govuk-label govuk-radios__label" for="signIn">
-                    Self-catering
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="signIn-2" name="type" type="radio" value="Bed and breakfast" aria-describedby="proerty-type-item-hint">
-                  <label class="govuk-label govuk-radios__label" for="signIn-2">
-                    Bed and breakfast
-                  </label>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="contact-3" name="type" type="radio" value="Other" data-aria-controls="conditional-contact-3">
-                  <label class="govuk-label govuk-radios__label" for="contact-3">
-                    Other
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label" for="contact-by-text">
-                      Please specify
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="facilities" name="type" type="checkbox" value="Campsite or caravan park">
+                    <label class="govuk-label govuk-checkboxes__label" for="facilities">
+                      Campsite or caravan park
                     </label>
-                    <input class="govuk-input govuk-!-width-one-half" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="facilities-2" name="type" type="checkbox" value="Hotel">
+                    <label class="govuk-label govuk-checkboxes__label" for="facilities">
+                      Hotel
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="facilities-3" name="type" type="checkbox" value="Self-catering">
+                    <label class="govuk-label govuk-checkboxes__label" for="facilities-2">
+                      Self-catering
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="facilities-4" name="type" type="checkbox" value="Bed and breakfast">
+                    <label class="govuk-label govuk-checkboxes__label" for="facilities-2">
+                      Bed and breakfast
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__divider">or</div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="facilities-5" name="type" type="checkbox" value="none" data-behaviour="exclusive" style="background-color: #fff;">
+                    <label class="govuk-label govuk-checkboxes__label" for="facilities-5">
+                      None of these facilities
+                    </label>
                   </div>
                 </div>
-
-              </div>
-            </fieldset>
+              </fieldset>
+            </div>
 
             <br>
 
