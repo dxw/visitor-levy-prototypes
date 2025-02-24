@@ -1,0 +1,53 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/name-relationship"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+
+        <form action="./business-address" method="post" novalidate >
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Charity details
+              </h1>
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-line-1">
+                Full charity name
+              </label>
+              <div id="event-name-hint" class="govuk-hint">
+                The name as it appears in the <a href="https://register-of-charities.charitycommission.gov.uk/en/charity-search" target="_blank" rel="noopener noreferrer">Charity Commission register</a>
+              </div>
+              <input class="govuk-input" id="address-line-1" name="company-name" type="text" autocomplete="address-line1">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-postcode">
+                Charity numnber
+              </label>
+              <div id="event-name-hint" class="govuk-hint">
+                6 digit number on the <a href="https://register-of-charities.charitycommission.gov.uk/en/charity-search" target="_blank" rel="noopener noreferrer">Charity Commission register</a>, for example 228949 
+              </div>
+              <input class="govuk-input govuk-input--width-5" id="address-postcode" name="company-number" type="text" autocomplete="postal-code">
+            </div>
+          </fieldset>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Save and continue
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

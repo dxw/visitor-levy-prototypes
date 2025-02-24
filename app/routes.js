@@ -110,6 +110,22 @@ router.post('/en/register/details-limited-company/v1/name-owner', function(reque
     }
 })
 
+// Role - sole trader
+router.post('/en/register/details-charityv1/name-owner', function(request, response) {
+
+    var relationship = request.session.data['relationship']
+
+    if (relationship == "Employee"){
+        response.redirect("/en/register/details-charityv1/name-employee");
+
+    } else if (relationship == "Property management company"){
+        response.redirect("/en/register/details-charityv1/name-management-company");
+
+    } else {
+        response.redirect("/en/register/details-charityv1/name-owner")
+    }
+})
+
 // Role - partnership
 router.post('/en/register/details-partnership/v1/name-owner', function(request, response) {
 
@@ -159,6 +175,17 @@ router.post('/en/register/details-partnership/v1/trading-name', function(request
         response.redirect("/en/register/address/v1/postcode")
     } else {
         response.redirect("/en/register/details-partnership/v1/trading-name")
+    }
+})
+
+// Trading name - charity
+router.post('/en/register/details-charity/v1/trading-name', function(request, response) {
+
+    var hasTradingName = request.session.data['hasTradingName']
+    if (hasTradingName == "no"){
+        response.redirect("/en/register/address/v1/postcode")
+    } else {
+        response.redirect("/en/register/details-charity/v1/trading-name")
     }
 })
 

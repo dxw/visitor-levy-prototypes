@@ -1,0 +1,64 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/name-relationship"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+
+        <form action="./name-owner" method="post" novalidate >
+
+          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is your role with the charity?
+              </h1>
+            </legend>
+          </fieldset>
+
+          <br>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="relationship" name="relationship" type="radio" value="Director">
+                  <label class="govuk-label govuk-radios__label" for="relationship">
+                    I am a trustee of the charity
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="relationship-2" name="relationship" type="radio" value="Employee">
+                  <label class="govuk-label govuk-radios__label" for="relationship-2">
+                    I am a employee of the charity
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="relationship-2" name="relationship" type="radio" value="Property management company">
+                  <label class="govuk-label govuk-radios__label" for="relationship-2">
+                    I look after the property on behalf of another business
+                  </label>
+                  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                    This includes property management companies, that for example are paid to clean and maintain a property that is used a short-term accommodation.
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <br><br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Save and continue
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

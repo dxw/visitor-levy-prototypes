@@ -1,0 +1,56 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/name-relationship"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+
+        <form action="./trading-name" method="post" novalidate >
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Does your charity have a trading name?
+                </h1>
+              </legend>
+              <div id="changedName-hint" class="govuk-hint">
+                A trading name is the name a business operates under, which may be different from the name registered with the Charity Commission. It helps identify the business to customers and clients, especially in marketing or sales.
+              </div>
+              <div id="changedName-hint" class="govuk-hint">
+                For example you might pay tax as Linda Ahmed, but your trading name is Blue Bay Cottages.
+              </div>
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="hasTradingName" name="hasTradingName" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="hasTradingName">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="hasTradingName-2" name="hasTradingName" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="hasTradingName-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Save and continue
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
