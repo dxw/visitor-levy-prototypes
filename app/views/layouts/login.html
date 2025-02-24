@@ -7,6 +7,19 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {% set htmlLang = currentLanguage %}
 
+{% block head %}
+  {{ super() }}
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGESRWTYJF"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'G-XGESRWTYJF');
+ </script>
+{% endblock %}
+
 {% block header %}
 	<header class="govuk-header " role="banner" data-module="govuk-header" style="background-color: #eeeeee;">
 	  <div class="govuk-header__container govuk-width-container" style="border-bottom: 10px solid transparent;">
