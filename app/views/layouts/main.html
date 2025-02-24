@@ -9,12 +9,20 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {% block head %}
   {{ super() }}
-	<script defer data-domain="register-accommodation-wales-483fed5b4c48.herokuapp.com" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"></script>
-	<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VVBBQPEWN3"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+
+	  function gtag() {
+	    dataLayer.push(arguments);
+	  }
+	  gtag('js', new Date());
+	  gtag('config', 'G-VVBBQPEWN3');
+	</script>
 {% endblock %}
 
 {% block header %}
-	
 	<header class="govuk-header " role="banner" data-module="govuk-header" style="background-color: #F8D756;">
 	  <div class="govuk-header__container govuk-width-container" style="border-bottom: 10px solid transparent;">
 	        <span class="govuk-header__logotype" style="padding-top: 10px; padding-bottom: 10px;">
