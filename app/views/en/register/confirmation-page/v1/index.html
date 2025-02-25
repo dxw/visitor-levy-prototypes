@@ -1,29 +1,39 @@
-{% extends "layouts/english-survey.html" %}
-{% set alternateLink = "/cy/register/confirm"%}
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/postcode"%}
 {% set pageName="Visitor levy prototypes" %}
 
 {% block content %}
 
-  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group" id="form-background-gov-wales">
 
-    <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-form-group" id="form-background-gov-wales">
+          <p id="confirmation-gov-wales">
+            <span class="govuk-!-font-size-24">Registration complete</span><br><br>
+            <span class="govuk-!-font-weight-regular">{{ data['address-selected'] }} is now registered as accommodation in Wales<br><br>
+            Your registration number is
+            </span>87219786
+          </p>
 
-        <p id="confirmation-gov-wales">
-          Registration complete<br><br>
-          <span class="govuk-!-font-weight-regular">{{ data['address-selected'] }} is now registered as accommodation<br><br>
-          Your registration number is
-          </span>87219786
-        </p>
+          <p class="govuk-body">We have sent you a confirmation email.</p>
 
-        <p class="govuk-body">We have sent you a confirmation email.</p>
+          <h2 class="govuk-heading-m">What happens next</h2>
+          <p class="govuk-body">
+            You will get updates from Swandiff about any future plans to introduce a visitor levy in your area.
+          </p>
+          <p class="">You can de-register this property at anytime.</p>
 
-        <h2 class="govuk-heading-m">What happens next</h2>
-        <p class="govuk-body">
-          You will get updates from Swandiff about any future plans to introduce a visitor levy in your area.
-        </p>
-        <p class="">You can de-register this property at anytime.</p>
+        </div>
+      </div>
 
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-form-group" id="form-background-gov-wales" style="border: 4px solid #0360a6; color: #fff;">
+          <h2 class="govuk-heading-m">End of test</h2>
+          <p class="govuk-body">Thank you for testing the registration service</p>
+          <div id="survey-button" class="govuk-button-group" style="margin-bottom: 0px;">
+            <a href="https://surveys.wra.gov.wales/s/registration-prototype-feedback/" class="govuk-button govuk-button--secondary" id="secondary-button-gov-wales" style="background: #0360a6; color: #ffffff; margin-bottom: 0px; width: 100%;">Give feedback</a>
+          </div>
+        </div>
       </div>
 
     </div>

@@ -85,6 +85,30 @@
                   </dd>
                 </div>
               {% endif %}
+              {% if data.ownership=="Charity" %}
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Charity name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['charity-name'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Charity number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['charity-number'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </div>
+              {% endif %}
               {% if data.ownership=="Partnership" %}
                 {% if data.Add2ndPartner=="yes" %}
                   <div class="govuk-summary-list__row">
@@ -262,21 +286,25 @@
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                {% if data.type=="Campsite" %}
-                  Pitches
-                {% endif %}
-                {% if data.type=="Hotel" %}
-                  Bedrooms
-                {% endif %}
-                {% if data.type=="Self catering" %}
-                  Bedrooms
-                {% endif %}
-                {% if data.type=="Bed and breakfast" %}
-                  Bedrooms
-                {% endif %}
-                {% if data.type=="Other" %}
-                  Units
-                {% endif %}
+                  {% if data.type=="Campsite or caravan park" %}
+                    Pitches
+                  {% elif data.type=="none" %}
+                    Number of sleeping units
+                  {% elif data.type=="Campsite or caravan park,Hotel" %}
+                    Pitches and bedrooms
+                  {% elif data.type=="Campsite or caravan park,Self-catering" %}
+                    Pitches and bedrooms               
+                  {% elif data.type=="Campsite or caravan park,Bed and breakfast" %}
+                    Pitches and bedrooms
+                  {% elif data.type=="Campsite or caravan park,Hotel,Self-catering" %}
+                    Pitches and bedrooms               
+                  {% elif data.type=="Campsite or caravan park,Self-catering,Bed and breakfast" %}
+                    Pitches and bedrooms  
+                  {% elif data.type=="Campsite or caravan park,Hotel,Self-catering,Bed and breakfast" %}
+                    Pitches and bedrooms             
+                  {% else %}
+                    Bedrooms
+                  {% endif %}
                 </dt>
                 <dd class="govuk-summary-list__value">
                   {{ data['units'] }}

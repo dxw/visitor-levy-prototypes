@@ -21,7 +21,7 @@
                   <h1 class="govuk-fieldset__heading">
                     How many pitches does the property have?
                   </h1>
-                {% elif data.type=="Other" %}
+                {% elif data.type=="none" %}
                   <h1 class="govuk-fieldset__heading">
                     How many sleeping units does the property have?
                   </h1>
@@ -61,17 +61,24 @@
               <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="address-postcode">
-                    {% if data.type=="campsite" %}
+                    {% if data.type=="Campsite or caravan park" %}
                       Number of pitches
-                    {% endif %}
-                    {% if data.type=="hotel" %}
-                      Number of rooms
-                    {% endif %}
-                    {% if data.type=="self-catering" %}
-                      Number of rooms
-                    {% endif %}
-                    {% if data.type=="bnb" %}
-                      Number of rooms
+                    {% elif data.type=="none" %}
+                      Number of sleeping units
+                    {% elif data.type=="Campsite or caravan park,Hotel" %}
+                      Number of pitches and bedrooms
+                    {% elif data.type=="Campsite or caravan park,Self-catering" %}
+                      Number of pitches and bedrooms               
+                    {% elif data.type=="Campsite or caravan park,Bed and breakfast" %}
+                      Number of pitches and bedrooms
+                    {% elif data.type=="Campsite or caravan park,Hotel,Self-catering" %}
+                      Number of pitches and bedrooms               
+                    {% elif data.type=="Campsite or caravan park,Self-catering,Bed and breakfast" %}
+                      Number of pitches and bedrooms  
+                    {% elif data.type=="Campsite or caravan park,Hotel,Self-catering,Bed and breakfast" %}
+                      Number of pitches and bedrooms             
+                    {% else %}
+                      Number of bedrooms
                     {% endif %}
                   </label>
                   <input class="govuk-input govuk-input--width-10" id="address-postcode" name="units" type="text" autocomplete="postal-code">
